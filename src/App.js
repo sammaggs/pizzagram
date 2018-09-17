@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import HomePage from './HomePage';
+import HomePage from './data/components/HomePage';
 import {
   BrowserRouter as Router,
   Route,
