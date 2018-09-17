@@ -3,6 +3,8 @@ import pizzaImage from "./images/pizzaHomePage.jpg";
 import pizzaGram from "./images/pizzagram.png";
 import Button from "./Button";
 
+
+
 class HomePage extends Component {
   constructor(props) {
     super(props);
@@ -11,7 +13,7 @@ class HomePage extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="container">
+        <div>
             <img src={pizzaGram} />
             <img src={pizzaImage} />
             <Button buttonText={"Build Your Own 🍕 "} />
