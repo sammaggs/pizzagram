@@ -11,15 +11,21 @@ class OptionsPage extends Component {
     return (
       <React.Fragment>
         <div>
-            <h1>Base</h1>
+          <h1>
+            <Link to="/">Base</Link>
+          </h1>
         </div>
 
         <div>
-            <h1>Sauce</h1>
+          <h1>
+            <Link to="/">Sauce</Link>
+          </h1>
         </div>
 
         <div>
-            <h1>Toppings</h1>
+          <h1>
+            <Link to="/">Toppings</Link>
+          </h1>
         </div>
       </React.Fragment>
     );
