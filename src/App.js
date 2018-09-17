@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <Router>
         <React.Fragment>
-        <Route exact path="/" component={ HomePage }/>        
+          <Route exact path="/" component={ HomePage }/>        
         </React.Fragment>
       </Router>
     );
