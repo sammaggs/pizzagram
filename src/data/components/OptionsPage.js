@@ -2,7 +2,11 @@ import React, { Component } from "react";
 import Button from "./Button";
 import { Link } from "react-router-dom";
 // import pizzaSauce from '../../images/pizza-sauce.jpg';
-import pizzaTopping from '../../images/pizza-toppings.jpg';
+// import pizzaTopping from '../../images/pizza-toppings.jpg';
+
+const imageStyling = {
+  borderRadius : 200
+}
 
 class OptionsPage extends Component {
   constructor(props) {
@@ -28,7 +32,7 @@ class OptionsPage extends Component {
         <div>
           <h1>
             <Link to="/">Toppings</Link>
-            <img src={pizzaTopping} />
+            {/* <img style={imageStyling} src={pizzaTopping} /> */}
           </h1>
         </div>
         <Button buttonText={"Done"}/>
