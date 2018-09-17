@@ -11,10 +11,12 @@ class HomePage extends Component {
   render() {
     return (
       <React.Fragment>
-        <img src={pizzaGram} />
-        <img src={pizzaImage} />
-        <Button buttonText={"Build Your Own 🍕 "} />
-        <Button buttonText={"I'm Feeling Lucky 🍀"} />
+        <div className="container">
+            <img src={pizzaGram} />
+            <img src={pizzaImage} />
+            <Button buttonText={"Build Your Own 🍕 "} />
+            <Button buttonText={"I'm Feeling Lucky 🍀"} />
+        </div>
       </React.Fragment>
     );
   }
