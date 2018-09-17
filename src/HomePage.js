@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import pizzaImage from "./images/pizzaHomePage.jpg";
+import pizzaGram from "./images/pizzagram.png";
 import Button from "./Button";
 
 class HomePage extends Component {
@@ -10,9 +11,10 @@ class HomePage extends Component {
   render() {
     return (
       <React.Fragment>
+        <img src={pizzaGram} />
         <img src={pizzaImage} />
-        <Button buttonText={"Build"} />
-        <Button buttonText={"Random"} />
+        <Button buttonText={"Build Your Own 🍕 "} />
+        <Button buttonText={"I'm Feeling Lucky 🍀"} />
       </React.Fragment>
     );
   }
