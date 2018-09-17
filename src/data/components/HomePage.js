@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import pizzaImage from "./images/pizzaHomePage.jpg";
-import pizzaGram from "./images/pizzagram.png";
+import pizzaImage from "../../images/pizzaImage";
+import pizzaGram from "../../images/pizzaGram";
 import Button from "./Button";
 
 
