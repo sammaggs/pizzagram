@@ -16,7 +16,7 @@ class HomePage extends Component {
         <div>
             <img src={pizzaGram} />
             <img src={pizzaImage} />
-            <Button buttonText={"Build Your Own 🍕 "} />
+            <Button buttonText={"Build Your Own 🍕"} />
             <Button buttonText={"I'm Feeling Lucky 🍀"} />
         </div>
       </React.Fragment>
