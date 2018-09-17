@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import List from '../components/List';
+import { setOption } from '../actions/state';
 
 const mapStateToProps = state => {
     return {
@@ -7,8 +8,10 @@ const mapStateToProps = state => {
     }
 }
 
-const mapDispatchToProps = dispatch => {
-
+const mapDispatchToProps = (dispatch, {option}) => {
+    return {
+        onLoad: () => dispatch(setOption(option)),
+    }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(List);

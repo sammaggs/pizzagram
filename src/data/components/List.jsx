@@ -6,14 +6,18 @@ class List extends Component {
         super(props);
     }
 
+    componentDidMount() {
+        this.props.onLoad();
+    }
+
     render () {
         const { data } = this.props;
         return (
             <ul>
-                { ingredients ? (
-                    data.map(item => (
+                { data ? (
+                    data.ingredients.map(item => (
                         <li className="list-group-item" key={item.id}>
-                        <p>{ data.item }</p>
+                        <p>{ item.ingredient }</p>
                         </li>
                     ))
                 ) : <p>No ingredients found. :(</p>
