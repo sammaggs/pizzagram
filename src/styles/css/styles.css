@@ -6,6 +6,9 @@
   padding: 6px 12px;
   text-decoration: none; }
 
+.page .btn {
+  background-color: rebeccapurple !important; }
+
 .page .inner {
   padding: 6px;
   background-color: rebeccapurple; }

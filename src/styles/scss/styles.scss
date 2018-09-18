@@ -9,6 +9,9 @@ $padding: 6px;
         padding: $padding 12px;
         text-decoration: none;
     }
+    .btn {
+        background-color: rebeccapurple !important;
+    }
     .inner {
         padding: $padding;
         background-color: rebeccapurple;
