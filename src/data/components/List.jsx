@@ -11,7 +11,7 @@ class List extends Component {
     // }
 
     render () {
-        const { ingredients, base } = this.props;
+        const { ingredients } = this.props;
 
         return (
             <ul>

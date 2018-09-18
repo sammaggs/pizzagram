@@ -4,7 +4,7 @@ import reducer from "./reducers/reducer";
 
 const initial = {
   ingredients: {
-    
+
     1: {
       id: 1,
       selected: false,
