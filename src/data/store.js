@@ -38,7 +38,7 @@ const initial = {
       description: "Sharp English cheese",
 
       isBase: false,
-      isSauce: true,
+      isSauce: false,
       isTopping: true,
 
       isMeat: false,

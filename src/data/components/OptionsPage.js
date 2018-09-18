@@ -13,9 +13,13 @@ class OptionsPage extends Component {
     this.state = {
       optionExpandedSauce: false,
       optionExpandedBase: false,
+      optionExpandedTopping: false,
+
     };
     this.clickExpandSauce = this.clickExpandSauce.bind(this);
     this.clickExpandBase = this.clickExpandBase.bind(this);
+    this.clickExpandTopping = this.clickExpandTopping.bind(this);
+
   }
 
   clickExpandSauce() {
@@ -30,6 +34,12 @@ class OptionsPage extends Component {
     });
   }
 
+  clickExpandTopping() {
+    this.setState({
+      optionExpandedTopping: !this.state.optionExpandedTopping
+    });
+  }
+
   render() {
     const optionsStyle = {
       textAlign: "center",
@@ -39,24 +49,21 @@ class OptionsPage extends Component {
     return (
       <Fragment>
         <div style={optionsStyle}>
+
           <div>
-            <h1
-              style={{
-                height: "150px",
-                background: "green"
-              }}
-            >
+            <h1 style={{ background: "green" }}>
               <Button buttonText={"Base"} onClick={this.clickExpandBase} />
+            </h1>
+
               <img
                 style={{
-                  width: "200px",
+                  width: "100px",
                   border: "2px solid #b0b0b0",
                   borderRadius: "100px",
-                  float: "right"
                 }}
                 src={baseOptions}
               />
-            </h1>
+
             {this.state.optionExpandedBase ? (
               <div>
                 <List listType={"isBase"} />
@@ -65,18 +72,17 @@ class OptionsPage extends Component {
           </div>
 
           <div>
-          <img
+            <h1>
+              <Button buttonText={"Sauce"} onClick={this.clickExpandSauce} />
+            </h1>
+            <img
                 style={{
-                  width: "200px",
+                  width: "100px",
                   border: "2px solid #b0b0b0",
                   borderRadius: "100px",
-                  float: "right"
                 }}
                 src={sauceOptions}
               />
-            <h1 style={{ height: "150px" }}>
-              <Button buttonText={"Sauce"} onClick={this.clickExpandSauce} />
-            </h1>
             {this.state.optionExpandedSauce ? (
               <div>
                 <List listType={"isSauce"} />
@@ -85,25 +91,25 @@ class OptionsPage extends Component {
           </div>
 
           <div>
-            <h1
-              style={{
-                height: "150px",
-                background: "red"
-              }}
-            >
-              <Link to="/">Toppings</Link>
-              <img
+            <h1 style={{ background: "red" }}>
+              <Button buttonText={"Topping"} onClick={this.clickExpandTopping} />
+            </h1>
+            <img
                 style={{
-                  width: "200px",
+                  width: "100px",
                   border: "2px solid #b0b0b0",
                   borderRadius: "100px",
-                  float: "right"
                 }}
                 src={toppingOptions}
               />
-            </h1>
-            {/* <img src={pizzaTopping} /> */}
+            {this.state.optionExpandedTopping ? (
+              <div>
+                <List listType={"isTopping"} />
+              </div>
+            ) : null}
           </div>
+
+
           <Button buttonText={"I'm Done!"} />
         </div>
       </Fragment>
