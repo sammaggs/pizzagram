@@ -4,6 +4,12 @@ import pizzaImage from "../../images/pizzaHomePage.jpg";
 import pizzaGram from "../../images/pizzagram.png";
 import Button from "./Button";
 
+
+const homeStyle = {
+  textAlign: 'center',
+  justifyContent: 'center'
+};
+
 class HomePage extends Component {
   constructor(props) {
     super(props);
@@ -12,7 +18,7 @@ class HomePage extends Component {
   render() {
     return (
       <Fragment>
-        <div>
+        <div style={homeStyle}>
             <img src={pizzaGram} />
             <img src={pizzaImage} />
             <Link className="btn btn-primary" to="/options">Build Your Own 🍕</Link>
