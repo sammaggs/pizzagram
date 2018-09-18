@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
 import Button from "./Button";
-import { Link } from "react-router-dom";
 import baseOptions from "../../images/base.jpg";
 import sauceOptions from "../../images/sauces.jpg";
 import toppingOptions from "../../images/ingredients.jpg";
@@ -19,7 +18,6 @@ class OptionsPage extends Component {
     this.clickExpandSauce = this.clickExpandSauce.bind(this);
     this.clickExpandBase = this.clickExpandBase.bind(this);
     this.clickExpandTopping = this.clickExpandTopping.bind(this);
-
   }
 
   clickExpandSauce() {

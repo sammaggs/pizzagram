@@ -7,7 +7,8 @@ import Button from "./Button";
 
 const homeStyle = {
   textAlign: 'center',
-  justifyContent: 'center'
+  justifyContent: 'center',
+  display: "block"
 };
 
 class HomePage extends Component {
