@@ -10,9 +10,16 @@ class List extends Component {
     //     this.props.onLoad();
     // }
 
-    render () {
-        const { ingredients, listType } = this.props;
+    relevantOptions(option) {
+        if (option = "bases") {
+            
+        }
+    }
 
+    render () {
+        // const { data, option } = this.props;
+        // const relevantOptions = data.ingredients.filter(item => item.is)
+        const { ingredients, listType } = this.props;
         return (
             <ul>
                 { ingredients ? (
