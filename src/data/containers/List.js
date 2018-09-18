@@ -8,10 +8,11 @@ const mapStateToProps = state => {
     }
 }
 
-const mapDispatchToProps = (dispatch, {option}) => {
+const mapDispatchToProps = dispatch => {
     return {
-        onLoad: () => dispatch(setOption(option)),
-    }
-}
+        onLoad: () => dispatch(setOption()),
+    };
+};  
 
-export default connect(mapStateToProps, mapDispatchToProps)(List);
+const enhancer = connect(mapStateToProps, mapDispatchToProps);
+export default enhancer(List);

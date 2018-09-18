@@ -10,6 +10,6 @@ const reducer = (state, action) => {
         case 'setOption': return setPizzaOption(state, action.option);
         default: return state;
     }
-}
+};
 
 export default reducer;
