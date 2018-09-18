@@ -2,9 +2,10 @@ import { connect } from "react-redux";
 import List from '../components/List';
 import { setOption } from '../actions/state';
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, {option}) => {
     return {
-        data: state.data
+        data: state.data,
+        option: option
     }
 }
 
