@@ -1,16 +1,16 @@
 $padding: 6px;
 
- .page {
-h1 {
-
-    padding: $padding;     
-  }
-a {
-    display: block;
-    padding: $padding 12px;
-    text-decoration: none;    }
-
-  .inner {
-   padding: $padding;
-   background-color: red;   }
+.page {
+    h1 {
+        padding: $padding;     
+    }
+    a {
+        display: block;
+        padding: $padding 12px;
+        text-decoration: none;
+    }
+    .inner {
+        padding: $padding;
+        background-color: rebeccapurple;
+    }
 }
