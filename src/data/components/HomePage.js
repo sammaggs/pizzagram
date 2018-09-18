@@ -15,7 +15,7 @@ class HomePage extends Component {
         <div>
             <img src={pizzaGram} />
             <img src={pizzaImage} />
-            <Button buttonText={"Build Your Own 🍕"} />
+            <Link className="btn btn-primary" to="/options">Build Your Own 🍕</Link>
             <Button buttonText={"I'm Feeling Lucky 🍀"} />
         </div>
       </Fragment>
