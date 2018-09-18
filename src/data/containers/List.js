@@ -10,7 +10,7 @@ const mapStateToProps = (state, {option}) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onLoad: () => console.log("data")
+        onLoad: () => console.log("Do something useful with your mapDispatchToProps")
     };
 };
 
