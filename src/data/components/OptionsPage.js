@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import Button from "./Button";
 import { Link } from "react-router-dom";
 // import pizzaSauce from '../../images/pizza-sauce.jpg';
@@ -11,7 +11,7 @@ class OptionsPage extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <Fragment>
         <div>
           <h1>
             <Link to="/">Base</Link>
@@ -32,7 +32,7 @@ class OptionsPage extends Component {
           </h1>
         </div>
         <Button buttonText={"Done"}/>
-      </React.Fragment>
+      </Fragment>
     );
   }
 }
