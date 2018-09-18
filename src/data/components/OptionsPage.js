@@ -2,7 +2,10 @@ import React, { Component, Fragment } from "react";
 import Button from "./Button";
 import { Link } from "react-router-dom";
 // import pizzaSauce from '../../images/pizza-sauce.jpg';
-import pizzaTopping from '../../images/pizza-toppings.jpg';
+// import pizzaTopping from '../../images/pizza-toppings.jpg';
+
+
+
 
 class OptionsPage extends Component {
   constructor(props) {
@@ -10,8 +13,15 @@ class OptionsPage extends Component {
   }
 
   render() {
+
+    const optionsStyle = {
+      textAlign: 'center',
+      justifyContent: 'center'
+    };
+
     return (
       <Fragment>
+        <div style={optionsStyle}>
         <div>
           <h1>
             <Link to="/">Base</Link>
@@ -21,17 +31,18 @@ class OptionsPage extends Component {
         <div>
           <h1>
             <Link to="/">Sauce</Link>
-            {/* <img src={pizzaSauce} /> */}
           </h1>
+          {/* <img src={pizzaSauce} /> */}
         </div>
 
         <div>
           <h1>
             <Link to="/">Toppings</Link>
-            <img src={pizzaTopping} />
           </h1>
+          {/* <img src={pizzaTopping} /> */}
         </div>
-        <Button buttonText={"Done"}/>
+        <Button buttonText={"I'm Done!"}/>
+        </div>
       </Fragment>
     );
   }
