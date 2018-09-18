@@ -1,12 +1,11 @@
 import React, { Component, Fragment } from "react";
 import Button from "./Button";
 import { Link } from "react-router-dom";
-// import pizzaSauce from '../../images/pizza-sauce.jpg';
-// import pizzaTopping from '../../images/pizza-toppings.jpg';
 import baseOptions from '../../images/base.jpg';
 import sauceOptions from '../../images/sauces.jpg';
 import toppingOptions from '../../images/ingredients.jpg';
 
+import List from "../containers/List";
 
 class OptionsPage extends Component {
   constructor(props) {
@@ -44,7 +43,11 @@ class OptionsPage extends Component {
               float: "right"
             }} src={baseOptions} />
           </h1>
+<<<<<<< HEAD
           { this.state.optionExpanded ? <p>list of options</p> : null }
+=======
+          <List listType={"isBase"} />
+>>>>>>> list-component
         </div>
 
         <div>
@@ -57,6 +60,7 @@ class OptionsPage extends Component {
               float: "right"
             }} src={sauceOptions} />
           </h1>
+          <List listType={"isSauce"} />
           {/* <img src={pizzaSauce} /> */}
         </div>
 

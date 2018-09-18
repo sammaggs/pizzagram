@@ -6,15 +6,25 @@ class List extends Component {
         super(props);
     }
 
+    // componentDidMount() {
+    //     this.props.onLoad();
+    // }
+
     render () {
-        const { data } = this.props;
+        const { ingredients, listType } = this.props;
+
         return (
             <ul>
                 { ingredients ? (
-                    data.map(item => (
-                        <li className="list-group-item" key={item.id}>
-                        <p>{ data.item }</p>
-                        </li>
+                    Object.values(ingredients).map(item => (
+                        item[listType] ? (
+                            <div className="radio">
+                                <label>
+                                <input type="radio" checked={false}/>
+                                {item.ingredient}
+                                </label>
+                            </div>
+                        ) : null
                     ))
                 ) : <p>No ingredients found. :(</p>
                 } 
