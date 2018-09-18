@@ -3,16 +3,17 @@ import List from '../components/List';
 import { setOption } from '../actions/state';
 
 const mapStateToProps = state => {
+    console.log(state.data)
     return {
-        data: state.data
-    }
+        ingredients: state.ingredients,
+        }
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        onLoad: () => dispatch(setOption()),
-    };
-};  
+// const mapDispatchToProps = dispatch => {
+//     return {
+//         onLoad: () => console.log(data)
+//     };
+// };
 
-const enhancer = connect(mapStateToProps, mapDispatchToProps);
+const enhancer = connect(mapStateToProps, null);
 export default enhancer(List);

@@ -22,14 +22,12 @@ class OptionsPage extends Component {
           <h1>
             <Link to="/">Sauce</Link>
           </h1>
-          <List />
         </div>
 
         <div>
           <h1>
             <Link to="/">Toppings</Link>
           </h1>
-          <List />
         </div>
       </React.Fragment>
     );

@@ -6,17 +6,17 @@ class List extends Component {
         super(props);
     }
 
-    componentDidMount() {
-        this.props.onLoad();
-    }
+    // componentDidMount() {
+    //     this.props.onLoad();
+    // }
 
     render () {
-        const { data } = this.props;
+        const { ingredients, base } = this.props;
 
         return (
             <ul>
-                { data ? (
-                    data.ingredients.map(item => (
+                { base ? (
+                    Object.values(ingredients).map(item => (
                         <li className="list-group-item" key={item.id}>
                         <p>{ item.ingredient }</p>
                         </li>
