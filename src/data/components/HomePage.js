@@ -1,7 +1,14 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
+import { Link } from 'react-router-dom';
 import pizzaImage from "../../images/pizzaHomePage.jpg";
 import pizzaGram from "../../images/pizzagram.png";
 import Button from "./Button";
+
+
+const homeStyle = {
+  textAlign: 'center',
+  justifyContent: 'center'
+};
 
 class HomePage extends Component {
   constructor(props) {
@@ -10,14 +17,14 @@ class HomePage extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <div>
+      <Fragment>
+        <div style={homeStyle}>
             <img src={pizzaGram} />
             <img src={pizzaImage} />
-            <Button buttonText={"Build Your Own 🍕"} />
+            <Link className="btn btn-primary" to="/options">Build Your Own 🍕</Link>
             <Button buttonText={"I'm Feeling Lucky 🍀"} />
         </div>
-      </React.Fragment>
+      </Fragment>
     );
   }
 }

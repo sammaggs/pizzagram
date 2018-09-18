@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './App.css';
 import HomePage from './data/components/HomePage';
 import {
@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
         <React.Fragment>
-          <Route exact path="/" component={ HomePage }/>
+          <Route exact path="/" component={ HomePage } />
           <Route exact path="/options" component={ OptionsPage } />
           <Route exact path="/options/:option" render={ ({ match }) => (<List option={ match.params.option }/> )} />
         </React.Fragment>

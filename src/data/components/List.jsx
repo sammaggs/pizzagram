@@ -6,9 +6,9 @@ class List extends Component {
         super(props);
     }
 
-    componentDidMount() {
-        this.props.onLoad();
-    }
+    // componentDidMount() {
+    //     this.props.onLoad();
+    // }
 
     relevantOptions(option) {
         if (option = "bases") {
@@ -17,15 +17,21 @@ class List extends Component {
     }
 
     render () {
-        const { data, option } = this.props;
-        const relevantOptions = data.ingredients.filter(item => item.is)
+        // const { data, option } = this.props;
+        // const relevantOptions = data.ingredients.filter(item => item.is)
+        const { ingredients, listType } = this.props;
         return (
             <ul>
-                { data ? (
-                    data.ingredients.map(item => (
-                        <li className="list-group-item" key={item.id}>
-                        <p>{ item.ingredient }</p>
-                        </li>
+                { ingredients ? (
+                    Object.values(ingredients).map(item => (
+                        item[listType] ? (
+                            <div className="radio">
+                                <label>
+                                <input type="radio" checked={false}/>
+                                {item.ingredient}
+                                </label>
+                            </div>
+                        ) : null
                     ))
                 ) : <p>No ingredients found. :(</p>
                 } 

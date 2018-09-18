@@ -7,9 +7,9 @@ const setPizzaOption = (state, viewOption) => {
 
 const reducer = (state, action) => {
     switch (action.type) {
-        case 'setOption': return setPizzaOption(state, action.option);
+        case 'setOption': return setPizzaOption(state, action);
         default: return state;
     }
-}
+};
 
 export default reducer;
