@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 // import pizzaSauce from '../../images/pizza-sauce.jpg';
 // import pizzaTopping from '../../images/pizza-toppings.jpg';
 
-const imageStyling = {
-  borderRadius : 200
-}
+// const imageStyling = {
+//   borderRadius : 200
+// }
 
 class OptionsPage extends Component {
   constructor(props) {

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import pizzaImage from "../../images/pizzaHomePage.jpg";
 import pizzaGram from "../../images/pizzagram.png";
 import Button from "./Button";
+import history   from '../../History';
 
 class HomePage extends Component {
   constructor(props) {
@@ -14,12 +15,16 @@ class HomePage extends Component {
         <div>
             <img src={pizzaGram} />
             <img src={pizzaImage} />
-            <Button buttonText={"Build Your Own 🍕"} />
+            <Button 
+              onClick={() => { history.push('/options') }}
+              buttonText={"Build Your Own 🍕"} 
+              />
             <Button buttonText={"I'm Feeling Lucky 🍀"} />
         </div>
       </React.Fragment>
     );
   }
 }
+
 
 export default HomePage;
