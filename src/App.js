@@ -16,7 +16,7 @@ class App extends Component {
         <React.Fragment>
           <Route exact path="/" component={ HomePage } />
           <Route exact path="/options" component={ OptionsPage } />
-          {/* <Route exact path="/options/:option" render={ ({ match }) => (<List option={ match.params.option }/> )} /> */}
+          <Route exact path="/options/:option" render={ ({ match }) => (<List option={ match.params.option }/> )} />
           <Route exact path="/options/:finished" component={ FinishedPage } />
         </React.Fragment>
     );
