@@ -1,25 +1,17 @@
 import { connect } from "react-redux";
 import List from '../components/List';
-import { setOption } from '../actions/state';
 
-// const mapStateToProps = (state, {option}) => {
-//     return {
-//         data: state.data,
-//         option: option
-//     }
-
-const mapStateToProps = state => {
-    console.log(state.data)
+const mapStateToProps = (state, {option}) => {
     return {
-        ingredients: state.ingredients,
-        }
+        data: state.data,
+        option: option
+    }
 }
 
-// const mapDispatchToProps = dispatch => {
-//     return {
-//         onLoad: () => console.log(data)
-//     };
-// };
+const mapDispatchToProps = dispatch => {
+    return {
+        onLoad: () => console.log("data")
+    };
+};
 
-const enhancer = connect(mapStateToProps, null);
-export default enhancer(List);
+export default connect(mapStateToProps, mapDispatchToProps)(List);

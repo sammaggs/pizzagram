@@ -2,7 +2,13 @@ import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import reducer from "./reducers/reducer";
 
-const initial = require('./ingredients');
+const ingredientData = require('./ingredients')
+
+const initial = {
+  data: ingredientData,
+  option: null,
+  pizzaChoices: [],
+};
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

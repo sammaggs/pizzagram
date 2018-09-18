@@ -6,9 +6,9 @@ class List extends Component {
         super(props);
     }
 
-    // componentDidMount() {
-    //     this.props.onLoad();
-    // }
+    componentDidMount() {
+        this.props.onLoad();
+    }
 
     relevantOptions(option) {
         if (option = "bases") {
@@ -17,12 +17,11 @@ class List extends Component {
     }
 
     render () {
-        // const { data, option } = this.props;
-        // const relevantOptions = data.ingredients.filter(item => item.is)
-        const { ingredients, listType } = this.props;
+        const { data, option } = this.props;
+        const relevantOptions = data.filter(item => item);
         return (
             <ul>
-                { ingredients ? (
+                {/* { ingredients ? (
                     Object.values(ingredients).map(item => (
                         item[listType] ? (
                             <div className="radio">
@@ -34,7 +33,7 @@ class List extends Component {
                         ) : null
                     ))
                 ) : <p>No ingredients found. :(</p>
-                } 
+                }  */}
             </ul>
         )
     }
