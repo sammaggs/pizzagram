@@ -7,7 +7,11 @@ const ingredientData = require('./ingredients')
 const initial = {
   data: ingredientData,
   option: null,
-  pizzaChoices: [],
+  pizzaChoices: {
+    bases: [],
+    sauce: [],
+    toppings: []
+  },
 };
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

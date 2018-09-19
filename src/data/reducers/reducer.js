@@ -1,13 +1,18 @@
-const setPizzaOption = (state, viewOption) => {
-    return {
+const setPizzaChoices = (state, choices) => {
+    let newState = {
         ...state,
-        option: viewOption
-    }
-};
+        pizzaChoices: {
+            ...newState.pizzaChoices
+        }
+    };
+    console.log(newState);
+    return newState;
+    
+}
 
 const reducer = (state, action) => {
     switch (action.type) {
-        case 'setOption': return setPizzaOption(state, action);
+        case 'setChoices': return setPizzaChoices(state, action.choices);
         default: return state;
     }
 };
