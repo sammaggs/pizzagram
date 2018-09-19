@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import List from '../components/List';
+import { setChoices } from '../actions/state';
 
 const mapStateToProps = (state, {option}) => {
     return {
@@ -8,9 +9,9 @@ const mapStateToProps = (state, {option}) => {
     }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch, {choices}) => {
     return {
-        onLoad: () => console.log("Do something useful with your mapDispatchToProps")
+        onSave: (choices) => dispatch(setChoices(choices))
     };
 };
 

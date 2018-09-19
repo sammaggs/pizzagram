@@ -1,6 +1,6 @@
-export const setOption = ingredients => {
+export const setChoices = choices => {
     return {
-        type: 'setOption',
-        ingredients: ingredients,
+        type: 'setChoices',
+        choices: choices,
     }
-};
+}

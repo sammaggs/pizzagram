@@ -1,19 +1,46 @@
 import React, { Component } from "react";
 import Button from "./Button";
+import { Link } from "react-router-dom";
+
 
 class List extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            choices : {
+                [this.props.option]: [],
+            }
+        }
         this.relevantOptions = this.relevantOptions.bind(this);
-        this.onChange = this.onChange.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSave = this.handleSave.bind(this);
     }
 
-    componentDidMount() {
-        this.props.onLoad();
+    handleChange(e) {
+        if (e.target.checked) {
+            this.setState({
+                choices: {
+                    ...this.state.choices,
+                    [this.props.option]: [
+                        ...this.state.choices[this.props.option],
+                        e.target.id
+                    ]
+                }
+            })
+        } else {
+            let newState = {...this.state}
+            let changedChoices = newState.choices[this.props.option].filter(item => item !== e.target.id)
+            this.setState({
+                choices: {
+                    ...this.state.choices,
+                    [this.props.option]: changedChoices
+                }
+            })
+        }
     }
 
-    onChange(e) {
-        console.log("Do something with your onChange");
+    handleSave() {
+        this.props.onSave(this.state.choices);
     }
 
     relevantOptions(item, option) {
@@ -37,10 +64,10 @@ class List extends Component {
             <ul className="list-group">
                 <fieldset>
                 { relevantOptions.length ? (
-                    Object.values(relevantOptions).map((item, index) => (
-                        <li className="list-group-item" key={index}>
-                            <input id={index} name="ingredients" type="checkbox" onChange={ (e) => this.onChange(e) } />
-                            <label htmlFor={index} >
+                    Object.values(relevantOptions).map(item => (
+                        <li className="list-group-item" key={option + "-" + item.id}>
+                            <input id={item.id} name="ingredients" type="checkbox" onChange={ (e) => this.handleChange(e) } />
+                            <label htmlFor={item.id}>
                             {item.ingredient}
                             </label>
                         </li>
@@ -48,6 +75,8 @@ class List extends Component {
                 ) : <p>No ingredients found. :(</p>
                 }
                 </fieldset>
+                <Link className="btn btn-primary" to="/options">Back</Link>
+                <Button className="btn btn-primary" onClick={ this.handleSave } buttonText="Save Choices"></Button>
             </ul>
         )
     }
