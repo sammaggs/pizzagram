@@ -11,7 +11,6 @@ class List extends Component {
                 [this.props.option]: [],
             }
         }
-        
         this.relevantOptions = this.relevantOptions.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSave = this.handleSave.bind(this);
