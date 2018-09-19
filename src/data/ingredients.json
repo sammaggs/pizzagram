@@ -1,7 +1,6 @@
 [
     {
         "id": 1,
-        "selected": false,
 
         "ingredient": "Mozzarella",
         "description": "Mild creamy stretchy cheese",
@@ -26,7 +25,6 @@
     },
     {
         "id": 2,
-        "selected": false,
 
         "ingredient": "Cheddar",
         "description": "Sharp English cheese",
@@ -51,7 +49,6 @@
     },
     {
         "id": 3,
-        "selected": false,
 
         "ingredient": "Parmesan",
         "description": "Salty hard cheese from Italy",
@@ -76,7 +73,6 @@
     },
     {
         "id": 4,
-        "selected": false,
 
         "ingredient": "Pecorino",
         "description": "Salty hard Italian cheese",
@@ -101,7 +97,6 @@
     },
     {
         "id": 5,
-        "selected": false,
 
         "ingredient": "Feta",
         "description": "Sharp crumbly Greek cheese",
@@ -126,7 +121,6 @@
     },
     {
         "id": 6,
-        "selected": false,
 
         "ingredient": "Goats' cheese",
         "description": "Soft sharp cheese from goats' milk",
@@ -151,7 +145,6 @@
     },
     {
         "id": 7,
-        "selected": false,
 
         "ingredient": "Gorgonzola",
         "description": "Pungent Italian cheese",
@@ -176,7 +169,6 @@
     },
     {
         "id": 8,
-        "selected": false,
 
         "ingredient": "Ricotta",
         "description": "Mild Italian soft cheese",
@@ -201,7 +193,6 @@
     },
     {
         "id": 9,
-        "selected": false,
 
         "ingredient": "Béchamel",
         "description": "A creamy French sauce",
@@ -226,7 +217,6 @@
     },
     {
         "id": 10,
-        "selected": false,
 
         "ingredient": "Tomato",
         "description": "Common as a sauce or topping for traditional pizzas",
@@ -251,7 +241,6 @@
     },
     {
         "id": 11,
-        "selected": false,
 
         "ingredient": "Sun-dried tomato",
         "description": "Intensely flavoured dried tomato",
@@ -276,7 +265,6 @@
     },
     {
         "id": 12,
-        "selected": false,
 
         "ingredient": "Cherry tomato",
         "description": "Small sweet variety of tomato",
@@ -301,7 +289,6 @@
     },
     {
         "id": 13,
-        "selected": false,
 
         "ingredient": "Onion",
         "description": "Strong-flavoured white onion",
@@ -326,7 +313,6 @@
     },
     {
         "id": 14,
-        "selected": false,
 
         "ingredient": "Red onion",
         "description": "Slightly milder sweeter variety of onion",
@@ -351,7 +337,6 @@
     },
     {
         "id": 15,
-        "selected": false,
 
         "ingredient": "Caramelised onion",
         "description": "Sweet and soft cooked onion",
@@ -376,7 +361,6 @@
     },
     {
         "id": 16,
-        "selected": false,
 
         "ingredient": "Bell pepper",
         "description": "Green, red and yellow sweet pepper",
@@ -401,7 +385,6 @@
     },
     {
         "id": 17,
-        "selected": false,
 
         "ingredient": "Green olive",
         "description": "Salty olive",
@@ -426,7 +409,6 @@
     },
     {
         "id": 18,
-        "selected": false,
 
         "ingredient": "Black olive",
         "description": "Milder olive",
@@ -451,7 +433,6 @@
     },
     {
         "id": 19,
-        "selected": false,
 
         "ingredient": "Caper",
         "description": "Salty berry",
@@ -476,7 +457,6 @@
     },
     {
         "id": 20,
-        "selected": false,
 
         "ingredient": "Artichoke",
         "description": "Salty and soft",
@@ -501,7 +481,6 @@
     },
     {
         "id": 21,
-        "selected": false,
 
         "ingredient": "Aubergine",
         "description": "Mild-tasting fleshy porous vegetable",
@@ -526,7 +505,6 @@
     },
     {
         "id": 22,
-        "selected": false,
 
         "ingredient": "Mushroom",
         "description": "Earthy fungi",
@@ -551,7 +529,6 @@
     },
     {
         "id": 23,
-        "selected": false,
 
         "ingredient": "Courgette",
         "description": "Green mild-tasting squash variety",
@@ -576,7 +553,6 @@
     },
     {
         "id": 24,
-        "selected": false,
 
         "ingredient": "Asparagus",
         "description": "Slightly crisp green stem",
@@ -601,7 +577,6 @@
     },
     {
         "id": 25,
-        "selected": false,
 
         "ingredient": "Cauliflower",
         "description": "Crumbly earthy white flouret",
@@ -626,7 +601,6 @@
     },
     {
         "id": 26,
-        "selected": false,
 
         "ingredient": "Sweetcorn",
         "description": "Small sweet yellow kernels of corn",
@@ -651,7 +625,6 @@
     },
     {
         "id": 27,
-        "selected": false,
 
         "ingredient": "Potato",
         "description": "Earthy mild tuber",
@@ -676,7 +649,6 @@
     },
     {
         "id": 28,
-        "selected": false,
 
         "ingredient": "Pineapple",
         "description": "Sweet and acidic exotic fruit",
@@ -701,7 +673,6 @@
     },
     {
         "id": 29,
-        "selected": false,
 
         "ingredient": "Chilli pepper",
         "description": "Spicy pepper",
@@ -726,7 +697,6 @@
     },
     {
         "id": 30,
-        "selected": false,
 
         "ingredient": "Jalapeño pepper",
         "description": "Milder spicy pickled pepper",
@@ -751,7 +721,6 @@
     },
     {
         "id": 31,
-        "selected": false,
 
         "ingredient": "Garlic",
         "description": "Pungent, strongly-flavoured bulb",
@@ -776,7 +745,6 @@
     },
     {
         "id": 32,
-        "selected": false,
 
         "ingredient": "Spinach",
         "description": "Green leaf",
@@ -801,7 +769,6 @@
     },
     {
         "id": 33,
-        "selected": false,
 
         "ingredient": "Rocket",
         "description": "Mildly peppery leaf",
@@ -826,7 +793,6 @@
     },
     {
         "id": 34,
-        "selected": false,
 
         "ingredient": "Lambs' lettuce",
         "description": "Crisp small leaf and stalk",
@@ -851,7 +817,6 @@
     },
     {
         "id": 35,
-        "selected": false,
 
         "ingredient": "Basil",
         "description": "Aromatic leaf herb",
@@ -876,7 +841,6 @@
     },
     {
         "id": 36,
-        "selected": false,
 
         "ingredient": "Oregano",
         "description": "Italian dried herb",
@@ -901,7 +865,6 @@
     },
     {
         "id": 37,
-        "selected": false,
 
         "ingredient": "Black pepper",
         "description": "Spicy ground dried peppercorns",
@@ -926,7 +889,6 @@
     },
     {
         "id": 38,
-        "selected": false,
 
         "ingredient": "Ground chilli",
         "description": "Spicy ground dried red chilli",
@@ -951,7 +913,6 @@
     },
     {
         "id": 39,
-        "selected": false,
 
         "ingredient": "Chilli oil",
         "description": "Spicy oil",
@@ -976,7 +937,6 @@
     },
     {
         "id": 40,
-        "selected": false,
 
         "ingredient": "Garlic oil",
         "description": "Flavoured oil",
@@ -1001,7 +961,6 @@
     },
     {
         "id": 41,
-        "selected": false,
 
         "ingredient": "Truffle oil",
         "description": "Earthy rich oil",
@@ -1026,7 +985,6 @@
     },
     {
         "id": 42,
-        "selected": false,
 
         "ingredient": "Balsamic reduction",
         "description": "Sharp and sweet dark vinegar",
@@ -1051,7 +1009,6 @@
     },
     {
         "id": 43,
-        "selected": false,
 
         "ingredient": "Pesto",
         "description": "Basil, pine nut and parmesan paste",
@@ -1076,7 +1033,6 @@
     },
     {
         "id": 44,
-        "selected": false,
 
         "ingredient": "Pine nut",
         "description": "Small earthy nut",
@@ -1101,7 +1057,6 @@
     },
     {
         "id": 45,
-        "selected": false,
 
         "ingredient": "Pulled pork",
         "description": "Soft, slow-cooked shredded pork",
@@ -1126,7 +1081,6 @@
     },
     {
         "id": 46,
-        "selected": false,
 
         "ingredient": "Chicken",
         "description": "Sliced free-range chicken",
@@ -1151,7 +1105,6 @@
     },
     {
         "id": 47,
-        "selected": false,
 
         "ingredient": "Chilli beef",
         "description": "Spicy minced chilli beef",
@@ -1176,7 +1129,6 @@
     },
     {
         "id": 48,
-        "selected": false,
 
         "ingredient": "Ham",
         "description": "Sliced smoked ham",
@@ -1201,7 +1153,6 @@
     },
     {
         "id": 49,
-        "selected": false,
 
         "ingredient": "Bacon",
         "description": "Crispy smoked streaky bacon",
@@ -1226,7 +1177,6 @@
     },
     {
         "id": 50,
-        "selected": false,
 
         "ingredient": "Prosciutto",
         "description": "Italian cured ham",
@@ -1251,7 +1201,6 @@
     },
     {
         "id": 51,
-        "selected": false,
 
         "ingredient": "Panchetta",
         "description": "Diced Italian ham",
@@ -1276,7 +1225,6 @@
     },
     {
         "id": 52,
-        "selected": false,
 
         "ingredient": "Chorizo",
         "description": "Spanish spicy cured pork sausage",
@@ -1301,7 +1249,6 @@
     },
     {
         "id": 53,
-        "selected": false,
 
         "ingredient": "Pepperoni",
         "description": "Spicy American pork and beef sausage",
@@ -1326,7 +1273,6 @@
     },
     {
         "id": 54,
-        "selected": false,
 
         "ingredient": "Meatball",
         "description": "Minced beef meatball",
@@ -1351,7 +1297,6 @@
     },
     {
         "id": 55,
-        "selected": false,
 
         "ingredient": "King prawn",
         "description": "Large juicy prawn",
@@ -1376,7 +1321,6 @@
     },
     {
         "id": 56,
-        "selected": false,
 
         "ingredient": "Anchovy",
         "description": "Small salty fish",
@@ -1401,7 +1345,6 @@
     },
     {
         "id": 57,
-        "selected": false,
 
         "ingredient": "Smoked Salmon",
         "description": "Sliced smoked cured salmon",
@@ -1426,7 +1369,6 @@
     },
     {
         "id": 58,
-        "selected": false,
 
         "ingredient": "Tuna",
         "description": "Tinned tuna steak",
@@ -1451,7 +1393,6 @@
     },
     {
         "id": 59,
-        "selected": false,
 
         "ingredient": "Thin crust",
         "description": "Thin crispy bread crust",
@@ -1476,7 +1417,6 @@
     },
     {
         "id": 60,
-        "selected": false,
 
         "ingredient": "Deep pan",
         "description": "Thick chewy bread crust",
@@ -1501,7 +1441,6 @@
     },
     {
         "id": 61,
-        "selected": false,
 
         "ingredient": "Cauliflower base",
         "description": "Gluten-free cauliflower crust",
@@ -1526,7 +1465,6 @@
     },
     {
         "id": 62,
-        "selected": false,
 
         "ingredient": "Gluten-free",
         "description": "Crisp bread crust made with a mixture of non-gluten flours",
@@ -1551,7 +1489,6 @@
     },
     {
         "id": 63,
-        "selected": false,
 
         "ingredient": "Mozzarella-stuffed crust",
         "description": "Thin crust bread with stuffed crust",
@@ -1576,7 +1513,6 @@
     },
     {
         "id": 64,
-        "selected": false,
 
         "ingredient": "Garlic-stuffed crust",
         "description": "Thin crust bread with stuffed crust",
