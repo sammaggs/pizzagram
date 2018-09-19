@@ -11,32 +11,32 @@ class HomePage extends Component {
 
   render() {
     const homeContainer = {
-      alignItems: "center",
     };
 
-    const pizzaImageStyle = {
-      textAlign: "center"
+    const buttonStyle = {
+      display: 'flex',
+      justifyContent: "center",
+      margin: 10
+    }
+
+    const imgStyle = {
+      display: 'block',
+      margin: 'auto'
     }
 
     return (
       <Fragment>
         <div style={homeContainer}>
-          <div>
-            <img src={pizzaGram} />
-          </div>
-
-          <div>
-            <img style={pizzaImageStyle} src={pizzaImage} />
-          </div>
-
-          <div>
-            <Link className="btn btn-primary" to="/options">
-              Build Your Own 🍕
-            </Link>
-            <Link className="btn btn-primary" to="/options">
-              I'm Feeling Lucky 🍀
-            </Link>
-          </div>
+            <img src={pizzaGram} style={imgStyle} />
+            <img style={imgStyle} src={pizzaImage} />
+            <div style={buttonStyle}>
+              <Link  style={buttonStyle} className="btn btn-primary" to="/options">
+                Build Your Own 🍕
+              </Link>
+              <Link style={buttonStyle} className="btn btn-primary" to="/options">
+                I'm Feeling Lucky 🍀
+              </Link>
+            </div>
         </div>
       </Fragment>
     );
