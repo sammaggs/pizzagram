@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
+
 
 class FinishedPage extends Component {
   constructor(props) {
@@ -50,7 +52,7 @@ class FinishedPage extends Component {
           }
         </section>
         <section>
-          <button className="btn btn-outline-dark">Back</button>
+          <Link to="/options" className="btn btn-outline-dark">Back</Link>
         </section>
       </React.Fragment>
     );
