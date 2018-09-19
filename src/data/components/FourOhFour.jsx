@@ -1,1 +1,9 @@
-import React, { Component, Fragment } from 'react';
+import React from 'react';
+
+const FourOhFour = () => {
+    return (
+        <h1>Page not found!</h1>
+    )
+};
+
+export default FourOhFour;

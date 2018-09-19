@@ -8,17 +8,21 @@ import {
 import OptionsPage from './data/components/OptionsPage';
 import FinishedPage from './data/components/FinishedPage';
 import List from './data/containers/List';
+import FourOhFour from './data/components/FourOhFour';
 
 
 class App extends Component {
   render() {
     return (
-        <React.Fragment>
-          <Route exact path="/" component={ HomePage } />
-          <Route exact path="/options" component={ OptionsPage } />
-          <Route exact path="/options/:option" render={ ({ match }) => (<List option={ match.params.option }/> )} />
-          <Route exact path="/finished" component={ FinishedPage } />
-        </React.Fragment>
+        <Fragment>
+          <Switch>
+            <Route exact path="/" component={ HomePage } />
+            <Route exact path="/options" component={ OptionsPage } />
+            <Route exact path="/options/:option" render={ ({ match }) => (<List option={ match.params.option }/> )} />
+            <Route exact path="/finished" component={ FinishedPage } />
+            <Route component={FourOhFour} />
+          </Switch>
+        </Fragment>
     );
   }
 }
