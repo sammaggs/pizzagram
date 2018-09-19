@@ -65,14 +65,12 @@ class List extends Component {
                 <fieldset>
                 { relevantOptions.length ? (
                     Object.values(relevantOptions).map(item => (
-                        <React.Fragment>
-                        <li className="list-group-item" key={item.id}>
+                        <li className="list-group-item" key={option + "-" + item.id}>
                             <input id={item.id} name="ingredients" type="checkbox" onChange={ (e) => this.handleChange(e) } />
-                            <label htmlFor={item.id} >
+                            <label htmlFor={item.id}>
                             {item.ingredient}
                             </label>
                         </li>
-                        </React.Fragment>
                     ))
                 ) : <p>No ingredients found. :(</p>
                 }

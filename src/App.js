@@ -6,7 +6,7 @@ import {
   Switch,
 } from "react-router-dom";
 import OptionsPage from './data/components/OptionsPage';
-import FinishedPage from './data/components/FinishedPage';
+import FinishedPage from './data/containers/FinishedPage';
 import List from './data/containers/List';
 import FourOhFour from './data/components/FourOhFour';
 
