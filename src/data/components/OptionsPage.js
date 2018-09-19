@@ -91,7 +91,7 @@ class OptionsPage extends Component {
           </div>
 
 
-        <Link className="btn btn-primary" to="/options/finished">I'm Done!</Link>
+        <Link className="btn btn-primary" to="/finished">I'm Done!</Link>
         </div>
       </Fragment>
     );
