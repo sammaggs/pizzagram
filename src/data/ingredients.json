@@ -404,7 +404,7 @@
         "selected": false,
 
         "ingredient": "Green olive",
-        "description": "Salty olive",
+        "description": "Brined bud of the olive tree",
 
         "isBase": false,
         "isSauce": false,
@@ -429,7 +429,7 @@
         "selected": false,
 
         "ingredient": "Black olive",
-        "description": "Milder olive",
+        "description": "Milder olive bud",
 
         "isBase": false,
         "isSauce": false,
@@ -454,7 +454,7 @@
         "selected": false,
 
         "ingredient": "Caper",
-        "description": "Salty berry",
+        "description": "Brined bud of the caper bush",
 
         "isBase": false,
         "isSauce": false,
@@ -1503,31 +1503,6 @@
         "id": 61,
         "selected": false,
 
-        "ingredient": "Cauliflower base",
-        "description": "Gluten-free cauliflower crust",
-
-        "isBase": true,
-        "isSauce": false,
-        "isTopping": false,
-
-        "isMeat": false,
-        "isFish": false,
-        "isCheese": false,
-        "isVegetable": true,
-        "isSalad": false,
-        "isFungi": false,
-        "isExtra": false,
-        
-        "isVegan": true,
-        "isVegetarian": true,
-        "isGlutenFree": true,
-        "isKosher": true,
-        "isHalal": true
-    },
-    {
-        "id": 62,
-        "selected": false,
-
         "ingredient": "Gluten-free",
         "description": "Crisp bread crust made with a mixture of non-gluten flours",
 
@@ -1550,7 +1525,7 @@
         "isHalal": true
     },
     {
-        "id": 63,
+        "id": 62,
         "selected": false,
 
         "ingredient": "Mozzarella-stuffed crust",
@@ -1575,7 +1550,7 @@
         "isHalal": true
     },
     {
-        "id": 64,
+        "id": 63,
         "selected": false,
 
         "ingredient": "Garlic-stuffed crust",

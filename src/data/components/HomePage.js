@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import pizzaImage from "../../images/pizzaHomePage.jpg";
 import pizzaGram from "../../images/pizzagram.png";
 import Button from "./Button";
@@ -10,13 +10,33 @@ class HomePage extends Component {
   }
 
   render() {
+    const homeContainer = {
+    };
+
+    const buttonStyle = {
+      display: 'flex',
+      justifyContent: "center",
+      margin: 10
+    }
+
+    const imgStyle = {
+      display: 'block',
+      margin: 'auto'
+    }
+
     return (
       <Fragment>
-        <div>
-            <img src={pizzaGram} />
-            <img src={pizzaImage} />
-            <Link className="btn btn-primary" to="/options">Build Your Own 🍕</Link>
-            <Button buttonText={"I'm Feeling Lucky 🍀"} />
+        <div style={homeContainer}>
+            <img src={pizzaGram} style={imgStyle} />
+            <img style={imgStyle} src={pizzaImage} />
+            <div style={buttonStyle}>
+              <Link  style={buttonStyle} className="btn btn-primary" to="/options">
+                Build Your Own 🍕
+              </Link>
+              <Link style={buttonStyle} className="btn btn-primary" to="/options">
+                I'm Feeling Lucky 🍀
+              </Link>
+            </div>
         </div>
       </Fragment>
     );

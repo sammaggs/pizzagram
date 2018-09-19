@@ -1,0 +1,19 @@
+$padding: 6px;
+
+.page {
+    h1 {
+        padding: $padding;     
+    }
+    a {
+        display: block;
+        padding: $padding 12px;
+        text-decoration: none;
+    }
+    .btn {
+        background-color: rebeccapurple !important;
+    }
+    .inner {
+        padding: $padding;
+        background-color: rebeccapurple;
+    }
+}
