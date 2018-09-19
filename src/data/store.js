@@ -6,7 +6,6 @@ const ingredientData = require('./ingredients')
 
 const initial = {
   data: ingredientData,
-  option: null,
   pizzaChoices: {
     bases: [],
     sauce: [],
