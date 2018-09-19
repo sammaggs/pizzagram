@@ -1,11 +1,14 @@
 const setPizzaChoices = (state, choices) => {
+    let choicesEntries = Object.entries(choices);
+    console.log(choicesEntries[0][0]);
     let newState = {
         ...state,
-        pizzaChoices: choices
+        pizzaChoices: {
+            ...state.pizzaChoices,
+            [choicesEntries[0][0]]: choicesEntries[0][1],
+        }
     };
-    console.log(newState);
     return newState;
-    
 }
 
 const reducer = (state, action) => {

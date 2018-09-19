@@ -78,7 +78,7 @@ class OptionsPage extends Component {
 
           <div>
             <h1>
-              <Link className="btn btn-primary" to="/options/topping">Toppings</Link>
+              <Link className="btn btn-primary" to="/options/toppings">Toppings</Link>
             </h1>
             <img
                 style={{
