@@ -3,7 +3,7 @@ import Button from "./Button";
 import baseOptions from "../../images/base.jpg";
 import sauceOptions from "../../images/sauces.jpg";
 import toppingOptions from "../../images/ingredients.jpg";
-import List from "../containers/List";
+import { Link } from "react-router-dom";
 
 
 class OptionsPage extends Component {
@@ -15,28 +15,28 @@ class OptionsPage extends Component {
       optionExpandedTopping: false,
 
     };
-    this.clickExpandSauce = this.clickExpandSauce.bind(this);
-    this.clickExpandBase = this.clickExpandBase.bind(this);
-    this.clickExpandTopping = this.clickExpandTopping.bind(this);
+    // this.clickExpandSauce = this.clickExpandSauce.bind(this);
+    // this.clickExpandBase = this.clickExpandBase.bind(this);
+    // this.clickExpandTopping = this.clickExpandTopping.bind(this);
   }
 
-  clickExpandSauce() {
-    this.setState({
-      optionExpandedSauce: !this.state.optionExpandedSauce
-    });
-  }
+  // clickExpandSauce() {
+  //   this.setState({
+  //     optionExpandedSauce: !this.state.optionExpandedSauce
+  //   });
+  // }
 
-  clickExpandBase() {
-    this.setState({
-      optionExpandedBase: !this.state.optionExpandedBase
-    });
-  }
+  // clickExpandBase() {
+  //   this.setState({
+  //     optionExpandedBase: !this.state.optionExpandedBase
+  //   });
+  // }
 
-  clickExpandTopping() {
-    this.setState({
-      optionExpandedTopping: !this.state.optionExpandedTopping
-    });
-  }
+  // clickExpandTopping() {
+  //   this.setState({
+  //     optionExpandedTopping: !this.state.optionExpandedTopping
+  //   });
+  // }
 
   render() {
     const optionsStyle = {
@@ -50,9 +50,8 @@ class OptionsPage extends Component {
 
           <div>
             <h1 style={{ background: "green" }}>
-              <Button buttonText={"Base"} onClick={this.clickExpandBase} />
+              <Link className="btn btn-primary" to="/options/bases">Bases</Link>
             </h1>
-
               <img
                 style={{
                   width: "100px",
@@ -61,17 +60,11 @@ class OptionsPage extends Component {
                 }}
                 src={baseOptions}
               />
-
-            {this.state.optionExpandedBase ? (
-              <div>
-                <List listType={"isBase"} />
-              </div>
-            ) : null}
           </div>
 
           <div>
             <h1>
-              <Button buttonText={"Sauce"} onClick={this.clickExpandSauce} />
+            <Link className="btn btn-primary" to="/options/sauce">Sauce</Link>
             </h1>
             <img
                 style={{
@@ -81,16 +74,11 @@ class OptionsPage extends Component {
                 }}
                 src={sauceOptions}
               />
-            {this.state.optionExpandedSauce ? (
-              <div>
-                <List listType={"isSauce"} />
-              </div>
-            ) : null}
           </div>
 
           <div>
             <h1 style={{ background: "red" }}>
-              <Button buttonText={"Topping"} onClick={this.clickExpandTopping} />
+              <Link className="btn btn-primary" to="/options/topping">Toppings</Link>
             </h1>
             <img
                 style={{
@@ -100,15 +88,10 @@ class OptionsPage extends Component {
                 }}
                 src={toppingOptions}
               />
-            {this.state.optionExpandedTopping ? (
-              <div>
-                <List listType={"isTopping"} />
-              </div>
-            ) : null}
           </div>
 
 
-          <Button buttonText={"I'm Done!"} />
+        <Link className="btn btn-primary" to="/options/finished">I'm Done!</Link>
         </div>
       </Fragment>
     );
