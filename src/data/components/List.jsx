@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Button from "./Button";
 import { Link } from "react-router-dom";
-
+import '../../styles/css/List.css';
 
 class List extends Component {
     constructor(props) {
@@ -61,7 +61,7 @@ class List extends Component {
         const { data, option } = this.props;
         const relevantOptions = data.filter(item => this.relevantOptions(item, option));
         return (
-            <ul className="list-group">
+            <ul className="list-group list-group-flush">
                 <fieldset>
                 { relevantOptions.length ? (
                     Object.values(relevantOptions).map(item => (
