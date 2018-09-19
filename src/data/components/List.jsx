@@ -77,7 +77,7 @@ class List extends Component {
                 }
                 </fieldset>
                 <Link className="btn btn-primary" to="/options">Back</Link>
-                <Button className="btn btn-primary" onClick={ this.handleSave } buttonText="Save Choices"></Button>
+                <Button onClick={ this.handleSave } buttonText="Save Choices" colourTheme="success"></Button>
             </ul>
         )
     }

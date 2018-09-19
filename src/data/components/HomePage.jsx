@@ -11,30 +11,18 @@ class HomePage extends Component {
   }
 
   render() {
-    const homeContainer = {
-    };
-
-    const buttonStyle = {
-      display: 'flex',
-      justifyContent: "center",
-      margin: 10
-    }
-
-    const imgStyle = {
-      display: 'block',
-      margin: 'auto'
-    }
-
     return (
       <Fragment>
-        <div style={homeContainer}>
-            <img src={pizzaGram} style={imgStyle} />
-            <img style={imgStyle} src={pizzaImage} />
-            <div style={buttonStyle}>
-              <Link  style={buttonStyle} className="btn btn-primary" to="/options">
+        <div className="container-fluid d-flex flex-column align-items-center">
+            <img src={pizzaGram} />
+            <img src={pizzaImage} />
+            <div>
+              <Link className="btn btn-primary btn-lg" to="/options">
                 Build Your Own 🍕
               </Link>
-              <Link style={buttonStyle} className="btn btn-primary" to="/options">
+            </div>
+            <div>
+              <Link className="btn btn-danger btn-sm" to="/options">
                 I'm Feeling Lucky 🍀
               </Link>
             </div>
