@@ -9,7 +9,6 @@ class List extends Component {
         this.state = {
             choices : []
         }
-        
         this.relevantOptions = this.relevantOptions.bind(this);
         this.onChange = this.onChange.bind(this);
     }
