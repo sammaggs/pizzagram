@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Button from "./Button";
 import { Link } from "react-router-dom";
 import '../../styles/css/List.css';
+import '../../styles/css/App.css';
 
 class List extends Component {
     constructor(props) {

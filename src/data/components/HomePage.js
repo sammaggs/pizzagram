@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import pizzaImage from "../../images/pizzaHomePage.jpg";
 import pizzaGram from "../../images/pizzagram.png";
 import Button from "./Button";
+import '../../styles/css/App.css';
 
 class HomePage extends Component {
   constructor(props) {
