@@ -49,7 +49,7 @@ class OptionsPage extends Component {
         <div style={optionsStyle}>
 
           <div>
-            <h1 style={{ background: "green" }}>
+            <h1>
               <Link className="btn btn-primary" to="/options/bases">Bases</Link>
             </h1>
               <img
@@ -77,7 +77,7 @@ class OptionsPage extends Component {
           </div>
 
           <div>
-            <h1 style={{ background: "red" }}>
+            <h1>
               <Link className="btn btn-primary" to="/options/topping">Toppings</Link>
             </h1>
             <img

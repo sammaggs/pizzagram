@@ -1,9 +1,15 @@
 import React, { Component } from "react";
 import Button from "./Button";
+import { Link } from "react-router-dom";
+
 
 class List extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            choices : []
+        }
+        
         this.relevantOptions = this.relevantOptions.bind(this);
         this.onChange = this.onChange.bind(this);
     }
@@ -38,16 +44,20 @@ class List extends Component {
                 <fieldset>
                 { relevantOptions.length ? (
                     Object.values(relevantOptions).map((item, index) => (
+                        <React.Fragment>
                         <li className="list-group-item" key={index}>
                             <input id={index} name="ingredients" type="checkbox" onChange={ (e) => this.onChange(e) } />
                             <label htmlFor={index} >
                             {item.ingredient}
                             </label>
                         </li>
+                        </React.Fragment>
                     ))
                 ) : <p>No ingredients found. :(</p>
                 }
                 </fieldset>
+                <Link className="btn btn-primary" to="/options">Back</Link>
+                <Link className="btn btn-primary" to="/options/finished/">Save Choices</Link>
             </ul>
         )
     }
