@@ -1,9 +1,7 @@
 const setPizzaChoices = (state, choices) => {
     let newState = {
         ...state,
-        pizzaChoices: {
-            ...newState.pizzaChoices
-        }
+        pizzaChoices: choices
     };
     console.log(newState);
     return newState;
