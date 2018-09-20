@@ -8,6 +8,8 @@ $theme-colors: (
   "info": #1E8449,
 );
 
+$body-bg: #C0392B;
+
 // Required Bootstrap imports
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";

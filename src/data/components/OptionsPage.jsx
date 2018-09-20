@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from "react";
 import Button from "./Button";
-import baseOptions from "../../images/base.jpg";
-import sauceOptions from "../../images/sauces.jpg";
-import toppingOptions from "../../images/ingredients.jpg";
+import baseOptions from "../../images/pizza-dough.jpg";
+import sauceOptions from "../../images/pizza-sauce.jpg";
+import toppingOptions from "../../images/pizza-toppings.jpg";
 import { Link } from "react-router-dom";
 import '../../styles/css/App.css';
 
@@ -18,61 +18,49 @@ class OptionsPage extends Component {
   }
 
   render() {
-    const optionsStyle = {
-      textAlign: "center",
-      justifyContent: "center"
-    };
-
     return (
       <Fragment>
-        <section style={optionsStyle}>
+        <section className="d-flex flex-column align-items-center">
+          <div className="d-flex flex-column flex-lg-row align-items-center text-center text-light card-deck">
 
-          <div className="card">
-            <h1 className="card-header">Bases</h1>
-            <div className="card-body">
+            <div className="card d-flex flex-column justify-content-center align-items-center m-3 border-0">
               <img
-                style={{
-                  width: "100px",
-                  border: "2px solid #b0b0b0",
-                  borderRadius: "100px",
-                }}
                 src={baseOptions}
+                className="card-img"
+                alt="Pizza base"
               />
-              <Link className="btn btn-primary" to="/options/bases">Choose a base</Link>
+              <div className="card-img-overlay">
+                <h2 className="card-title">Bases</h2>
+                <Link className="btn btn-primary" to="/options/bases">Choose a base</Link>
+              </div>
             </div>
-          </div>
 
-          <div className="card">
-            <h1 className="card-header">Sauce</h1>
-            <div className="card-body">
+            <div className="card d-flex flex-column justify-content-center align-items-center m-3 border-0">
               <img
-                  style={{
-                    width: "100px",
-                    border: "2px solid #b0b0b0",
-                    borderRadius: "100px",
-                  }}
                   src={sauceOptions}
-                />
-              <Link className="btn btn-primary" to="/options/sauce">Choose a sauce</Link>
+                  className="card-img-top"
+                  alt="Pizza sauce"
+              />
+              <div className="card-img-overlay">
+                <h2 className="card-title">Sauce</h2>
+                <Link className="btn btn-primary" to="/options/sauce">Choose a sauce</Link>
+              </div>
             </div>
-          </div>
 
-          <div className="card">
-            <h1 className="card-header">Toppings</h1>
-            <div className="card-body">
+            <div className="card d-flex flex-column justify-content-center align-items-center m-3 border-0">
               <img
-                  style={{
-                    width: "100px",
-                    border: "2px solid #b0b0b0",
-                    borderRadius: "100px",
-                  }}
                   src={toppingOptions}
-                />
-                <Link className="btn btn-primary" to="/options/toppings">Choose toppings</Link>
+                  className="card-img-top"
+                  alt="Pizza toppings"
+              />
+              <div className="card-img-overlay">
+                <h2 className="card-title">Toppings</h2>
+                  <Link className="btn btn-primary" to="/options/toppings">Choose toppings</Link>
+              </div>
+
             </div>
           </div>
-
-        <Link className="btn btn-success btn-lg" to="/finished">Done</Link>
+        <Link className="btn btn-success btn-lg w-100 m-3" to="/finished">Done</Link>
         </section>
       </Fragment>
     );

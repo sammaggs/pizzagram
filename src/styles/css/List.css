@@ -55,7 +55,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff; }
+  background-color: #C0392B; }
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
@@ -391,7 +391,7 @@ mark,
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #fff;
+  background-color: #C0392B;
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
   max-width: 100%;
@@ -1042,7 +1042,7 @@ pre {
   .table tbody + tbody {
     border-top: 2px solid #dee2e6; }
   .table .table {
-    background-color: #fff; }
+    background-color: #C0392B; }
 
 .table-sm th,
 .table-sm td {
@@ -1169,7 +1169,7 @@ pre {
     background-color: rgba(0, 0, 0, 0.075); }
 
 .table .thead-dark th {
-  color: #fff;
+  color: #C0392B;
   background-color: #212529;
   border-color: #32383e; }
 
@@ -1179,7 +1179,7 @@ pre {
   border-color: #dee2e6; }
 
 .table-dark {
-  color: #fff;
+  color: #C0392B;
   background-color: #212529; }
   .table-dark th,
   .table-dark td,
@@ -1446,7 +1446,7 @@ textarea.form-control {
   background-color: #36d278; }
 
 .was-validated .custom-control-input:valid:focus ~ .custom-control-label::before, .custom-control-input.is-valid:focus ~ .custom-control-label::before {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(39, 174, 96, 0.25); }
+  box-shadow: 0 0 0 1px #C0392B, 0 0 0 0.2rem rgba(39, 174, 96, 0.25); }
 
 .was-validated .custom-file-input:valid ~ .custom-file-label, .custom-file-input.is-valid ~ .custom-file-label {
   border-color: #27AE60; }
@@ -1528,7 +1528,7 @@ textarea.form-control {
   background-color: #ed7669; }
 
 .was-validated .custom-control-input:invalid:focus ~ .custom-control-label::before, .custom-control-input.is-invalid:focus ~ .custom-control-label::before {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(231, 76, 60, 0.25); }
+  box-shadow: 0 0 0 1px #C0392B, 0 0 0 0.2rem rgba(231, 76, 60, 0.25); }
 
 .was-validated .custom-file-input:invalid ~ .custom-file-label, .custom-file-input.is-invalid ~ .custom-file-label {
   border-color: #E74C3C; }
@@ -2464,7 +2464,7 @@ input[type="button"].btn-block {
     color: #fff;
     background-color: #F1C40F; }
   .custom-control-input:focus ~ .custom-control-label::before {
-    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(241, 196, 15, 0.25); }
+    box-shadow: 0 0 0 1px #C0392B, 0 0 0 0.2rem rgba(241, 196, 15, 0.25); }
   .custom-control-input:active ~ .custom-control-label::before {
     color: #fff;
     background-color: #fbedb8; }
@@ -2635,11 +2635,11 @@ input[type="button"].btn-block {
   .custom-range:focus {
     outline: none; }
     .custom-range:focus::-webkit-slider-thumb {
-      box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(241, 196, 15, 0.25); }
+      box-shadow: 0 0 0 1px #C0392B, 0 0 0 0.2rem rgba(241, 196, 15, 0.25); }
     .custom-range:focus::-moz-range-thumb {
-      box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(241, 196, 15, 0.25); }
+      box-shadow: 0 0 0 1px #C0392B, 0 0 0 0.2rem rgba(241, 196, 15, 0.25); }
     .custom-range:focus::-ms-thumb {
-      box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(241, 196, 15, 0.25); }
+      box-shadow: 0 0 0 1px #C0392B, 0 0 0 0.2rem rgba(241, 196, 15, 0.25); }
   .custom-range::-moz-focus-outer {
     border: 0; }
   .custom-range::-webkit-slider-thumb {
@@ -2759,8 +2759,8 @@ input[type="button"].btn-block {
   .nav-tabs .nav-link.active,
   .nav-tabs .nav-item.show .nav-link {
     color: #495057;
-    background-color: #fff;
-    border-color: #dee2e6 #dee2e6 #fff; }
+    background-color: #C0392B;
+    border-color: #dee2e6 #dee2e6 #C0392B; }
   .nav-tabs .dropdown-menu {
     margin-top: -1px;
     border-top-left-radius: 0;
