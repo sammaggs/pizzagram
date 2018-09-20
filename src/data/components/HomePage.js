@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import pizzaImage from "../../images/pizzaHomePage.jpg";
 import pizzaGram from "../../images/pizzagram.png";
 import Button from "./Button";
-import Quantity from './Quantity';
+// import Quantity from './Quantity';
 import Randomiser from './Randomiser';
 
 

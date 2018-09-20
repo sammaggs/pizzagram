@@ -7,10 +7,10 @@ class Quantity extends Component {
         this.state = {
             quantity: "3"
         };
-        this.changeQuantity = this.changeQuantity.bind(this); 
+        this.changeQuantity = this.changeQuantity.bind(this);
     }
     changeQuantity(event) {
-        this.setState ({
+        this.setState ({ //this.props.changeQuantity quantity container, call action etc.
             quantity: event.target.value
         });
     }
