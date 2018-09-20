@@ -23,9 +23,9 @@ class List extends Component {
     componentDidMount () {
         let { data } = this.props;
         data.length ? 
-            this.setState({
-                loading: false,
-            }) : null;
+        this.setState({
+            loading: false,
+        }) : null;
     };
 
     handleChange(e) {
@@ -83,6 +83,7 @@ class List extends Component {
             content = <LoadingSpinner />;
           } else { content = 
             <main className="container">
+                <h2 className="pizzagram-header-text text-light">{ option.substring(0,1).toUpperCase() + option.substring(1) }</h2>
                 <ul className="list-group my-3">
                     <fieldset>
                     { relevantOptions.length ? (
