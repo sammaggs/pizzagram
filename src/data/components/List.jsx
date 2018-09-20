@@ -3,7 +3,6 @@ import Button from "./Button";
 import { Link } from "react-router-dom";
 import '../../styles/css/List.css';
 import '../../styles/css/App.css';
-// import axios from "../axios";
 import LoadingSpinner  from './LoadingSpinner';
 
 class List extends Component {
@@ -11,13 +10,14 @@ class List extends Component {
         super(props);
         this.state = {
             loading: true,
-            choices : {
+            choices: {
                 [this.props.option]: [],
             }
         }
         this.relevantOptions = this.relevantOptions.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSave = this.handleSave.bind(this);
+        this.handleItemSelect = this.handleItemSelect.bind(this);
     }
 
     componentDidMount () {
@@ -55,6 +55,32 @@ class List extends Component {
         this.props.onSave(this.state.choices);
     }
 
+    handleItemSelect(e) {
+        e.currentTarget.classList.toggle('active')
+        if (this.state.choices[this.props.option].indexOf(e.currentTarget.id) !== -1) {
+            let newState = {...this.state}
+            let changedChoices = newState.choices[this.props.option].filter(item => item !== e.currentTarget.id)
+            this.setState({
+                choices: {
+                    ...this.state.choices,
+                    [this.props.option]: [
+                        ...changedChoices
+                    ]
+                }
+            })
+        } else {
+            this.setState({
+                choices: {
+                    ...this.state.choices,
+                    [this.props.option]: [
+                        ...this.state.choices[this.props.option],
+                        e.currentTarget.id
+                    ]
+                }
+            })
+        }
+    }
+
     relevantOptions(item, option) {
         let isOption = null;
         if ((option === 'sauce') || (option === 'sauces')) {
@@ -84,21 +110,18 @@ class List extends Component {
           } else { content = 
             <main className="container">
                 <h2 className="pizzagram-header-text text-light">{ option.substring(0,1).toUpperCase() + option.substring(1) }</h2>
-                <ul className="list-group my-3">
+                <div className="list-group my-3">
                     <fieldset>
                     { relevantOptions.length ? (
                         Object.values(relevantOptions).map(item => (
-                            <li className="list-group-item" key={option + "-" + item.id}>
-                                <input id={item.id} name="ingredients" type="checkbox" onChange={ (e) => this.handleChange(e) } />
-                                <label htmlFor={item.id}>
+                            <button className="list-group-item list-group-item-action" key={option + "-" + item.id} id={item.id} onClick={ (e) => this.handleItemSelect(e) }>
                                 {item.ingredient}
-                                </label>
-                            </li>
+                            </button>
                         ))
                     ) : <LoadingSpinner />
                     }
                     </fieldset>
-                </ul>
+                </div>
                 <div className="d-flex justify-content-between pb-5">
                     <div className="back-button-container w-25 mr-2">
                         <Link className="btn btn-primary btn-block" to="/options">&lt; Back</Link>
