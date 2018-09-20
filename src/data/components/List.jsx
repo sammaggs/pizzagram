@@ -3,11 +3,14 @@ import Button from "./Button";
 import { Link } from "react-router-dom";
 import '../../styles/css/List.css';
 import '../../styles/css/App.css';
+// import axios from "../axios";
+import LoadingSpinner  from './LoadingSpinner';
 
 class List extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            loading: true,
             choices : {
                 [this.props.option]: [],
             }
@@ -16,6 +19,14 @@ class List extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSave = this.handleSave.bind(this);
     }
+
+    componentDidMount () {
+        let { data } = this.props;
+        data.length ? 
+            this.setState({
+                loading: false,
+            }) : null;
+    };
 
     handleChange(e) {
         if (e.target.checked) {
@@ -65,26 +76,35 @@ class List extends Component {
     render () {
         const { data, option } = this.props;
         const relevantOptions = data.filter(item => this.relevantOptions(item, option));
-        return (
-            <section className="container">
-                <ul className="list-group list-group-flush">
-                    <fieldset>
-                    { relevantOptions.length ? (
-                        Object.values(relevantOptions).map(item => (
-                            <li className="list-group-item" key={option + "-" + item.id}>
-                                <input id={item.id} name="ingredients" type="checkbox" onChange={ (e) => this.handleChange(e) } />
-                                <label htmlFor={item.id}>
-                                {item.ingredient}
-                                </label>
-                            </li>
-                        ))
-                    ) : <p>No ingredients found. :(</p>
-                    }
-                    </fieldset>
-                    <Link className="btn btn-primary" to="/options">Back</Link>
-                </ul>
+
+        let content;
+
+        if (!data) {
+            content = <LoadingSpinner />;
+          } else { content = 
+            <ul className="list-group list-group-flush">
+                <fieldset>
+                { relevantOptions.length ? (
+                    Object.values(relevantOptions).map(item => (
+                        <li className="list-group-item" key={option + "-" + item.id}>
+                            <input id={item.id} name="ingredients" type="checkbox" onChange={ (e) => this.handleChange(e) } />
+                            <label htmlFor={item.id}>
+                            {item.ingredient}
+                            </label>
+                        </li>
+                    ))
+                ) : <LoadingSpinner />
+                }
+                </fieldset>
+                <Link className="btn btn-primary" to="/options">Back</Link>
                 <Button onClick={ this.handleSave } buttonText="Save Choices" colourTheme="success"></Button>
-            </section>
+            </ul>
+          }
+
+        return (
+            <div>
+                {content}
+            </div>
         )
     }
 };
