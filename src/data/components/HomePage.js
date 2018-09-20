@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import pizzaImage from "../../images/pizzaHomePage.jpg";
 import pizzaGram from "../../images/pizzagram.png";
 import Button from "./Button";
+// import Quantity from './Quantity';
+import Randomiser from './Randomiser';
+
 
 class HomePage extends Component {
   constructor(props) {
@@ -33,9 +36,8 @@ class HomePage extends Component {
               <Link  style={buttonStyle} className="btn btn-primary" to="/options">
                 Build Your Own 🍕
               </Link>
-              <Link style={buttonStyle} className="btn btn-primary" to="/options">
-                I'm Feeling Lucky 🍀
-              </Link>
+              <Randomiser />
+              {/* <Quantity /> */}
             </div>
         </div>
       </Fragment>
