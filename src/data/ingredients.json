@@ -1,7 +1,5 @@
 [
     {
-        "id": 1,
-
         "ingredient": "Mozzarella",
         "description": "Mild creamy stretchy cheese",
 
@@ -24,8 +22,6 @@
         "isHalal": true
     },
     {
-        "id": 2,
-
         "ingredient": "Cheddar",
         "description": "Sharp English cheese",
 
@@ -48,8 +44,6 @@
         "isHalal": true
     },
     {
-        "id": 3,
-
         "ingredient": "Parmesan",
         "description": "Salty hard cheese from Italy",
 
@@ -72,8 +66,6 @@
         "isHalal": true
     },
     {
-        "id": 4,
-
         "ingredient": "Pecorino",
         "description": "Salty hard Italian cheese",
 
@@ -96,8 +88,6 @@
         "isHalal": true
     },
     {
-        "id": 5,
-
         "ingredient": "Feta",
         "description": "Sharp crumbly Greek cheese",
 
@@ -120,8 +110,6 @@
         "isHalal": true
     },
     {
-        "id": 6,
-
         "ingredient": "Goats' cheese",
         "description": "Soft sharp cheese from goats' milk",
 
@@ -144,8 +132,6 @@
         "isHalal": true
     },
     {
-        "id": 7,
-
         "ingredient": "Gorgonzola",
         "description": "Pungent Italian cheese",
 
@@ -168,8 +154,6 @@
         "isHalal": true
     },
     {
-        "id": 8,
-
         "ingredient": "Ricotta",
         "description": "Mild Italian soft cheese",
 
@@ -192,8 +176,6 @@
         "isHalal": true
     },
     {
-        "id": 9,
-
         "ingredient": "Béchamel",
         "description": "A creamy French sauce",
 
@@ -216,8 +198,6 @@
         "isHalal": true
     },
     {
-        "id": 10,
-
         "ingredient": "Tomato",
         "description": "Common as a sauce or topping for traditional pizzas",
 
@@ -240,8 +220,6 @@
         "isHalal": true
     },
     {
-        "id": 11,
-
         "ingredient": "Sun-dried tomato",
         "description": "Intensely flavoured dried tomato",
 
@@ -264,8 +242,6 @@
         "isHalal": true
     },
     {
-        "id": 12,
-
         "ingredient": "Cherry tomato",
         "description": "Small sweet variety of tomato",
 
@@ -288,8 +264,6 @@
         "isHalal": true
     },
     {
-        "id": 13,
-
         "ingredient": "Onion",
         "description": "Strong-flavoured white onion",
 
@@ -312,8 +286,6 @@
         "isHalal": true
     },
     {
-        "id": 14,
-
         "ingredient": "Red onion",
         "description": "Slightly milder sweeter variety of onion",
 
@@ -336,8 +308,6 @@
         "isHalal": true
     },
     {
-        "id": 15,
-
         "ingredient": "Caramelised onion",
         "description": "Sweet and soft cooked onion",
 
@@ -360,8 +330,6 @@
         "isHalal": true
     },
     {
-        "id": 16,
-
         "ingredient": "Bell pepper",
         "description": "Green, red and yellow sweet pepper",
 
@@ -384,8 +352,6 @@
         "isHalal": true
     },
     {
-        "id": 17,
-
         "ingredient": "Green olive",
         "description": "Salty olive",
 
@@ -408,8 +374,6 @@
         "isHalal": true
     },
     {
-        "id": 18,
-
         "ingredient": "Black olive",
         "description": "Milder olive",
 
@@ -432,8 +396,6 @@
         "isHalal": true
     },
     {
-        "id": 19,
-
         "ingredient": "Caper",
         "description": "Salty berry",
 
@@ -456,8 +418,6 @@
         "isHalal": true
     },
     {
-        "id": 20,
-
         "ingredient": "Artichoke",
         "description": "Salty and soft",
 
@@ -480,8 +440,6 @@
         "isHalal": true
     },
     {
-        "id": 21,
-
         "ingredient": "Aubergine",
         "description": "Mild-tasting fleshy porous vegetable",
 
@@ -504,8 +462,6 @@
         "isHalal": true
     },
     {
-        "id": 22,
-
         "ingredient": "Mushroom",
         "description": "Earthy fungi",
 
@@ -528,8 +484,6 @@
         "isHalal": true
     },
     {
-        "id": 23,
-
         "ingredient": "Courgette",
         "description": "Green mild-tasting squash variety",
 
@@ -552,8 +506,6 @@
         "isHalal": true
     },
     {
-        "id": 24,
-
         "ingredient": "Asparagus",
         "description": "Slightly crisp green stem",
 
@@ -576,8 +528,6 @@
         "isHalal": true
     },
     {
-        "id": 25,
-
         "ingredient": "Cauliflower",
         "description": "Crumbly earthy white flouret",
 
@@ -600,8 +550,6 @@
         "isHalal": true
     },
     {
-        "id": 26,
-
         "ingredient": "Sweetcorn",
         "description": "Small sweet yellow kernels of corn",
 
@@ -624,8 +572,6 @@
         "isHalal": true
     },
     {
-        "id": 27,
-
         "ingredient": "Potato",
         "description": "Earthy mild tuber",
 
@@ -648,8 +594,6 @@
         "isHalal": true
     },
     {
-        "id": 28,
-
         "ingredient": "Pineapple",
         "description": "Sweet and acidic exotic fruit",
 
@@ -672,8 +616,6 @@
         "isHalal": true
     },
     {
-        "id": 29,
-
         "ingredient": "Chilli pepper",
         "description": "Spicy pepper",
 
@@ -696,8 +638,6 @@
         "isHalal": true
     },
     {
-        "id": 30,
-
         "ingredient": "Jalapeño pepper",
         "description": "Milder spicy pickled pepper",
 
@@ -720,8 +660,6 @@
         "isHalal": true
     },
     {
-        "id": 31,
-
         "ingredient": "Garlic",
         "description": "Pungent, strongly-flavoured bulb",
 
@@ -744,8 +682,6 @@
         "isHalal": true
     },
     {
-        "id": 32,
-
         "ingredient": "Spinach",
         "description": "Green leaf",
 
@@ -768,8 +704,6 @@
         "isHalal": true
     },
     {
-        "id": 33,
-
         "ingredient": "Rocket",
         "description": "Mildly peppery leaf",
 
@@ -792,8 +726,6 @@
         "isHalal": true
     },
     {
-        "id": 34,
-
         "ingredient": "Lambs' lettuce",
         "description": "Crisp small leaf and stalk",
 
@@ -816,8 +748,6 @@
         "isHalal": true
     },
     {
-        "id": 35,
-
         "ingredient": "Basil",
         "description": "Aromatic leaf herb",
 
@@ -840,8 +770,6 @@
         "isHalal": true
     },
     {
-        "id": 36,
-
         "ingredient": "Oregano",
         "description": "Italian dried herb",
 
@@ -864,8 +792,6 @@
         "isHalal": true
     },
     {
-        "id": 37,
-
         "ingredient": "Black pepper",
         "description": "Spicy ground dried peppercorns",
 
@@ -888,8 +814,6 @@
         "isHalal": true
     },
     {
-        "id": 38,
-
         "ingredient": "Ground chilli",
         "description": "Spicy ground dried red chilli",
 
@@ -912,8 +836,6 @@
         "isHalal": true
     },
     {
-        "id": 39,
-
         "ingredient": "Chilli oil",
         "description": "Spicy oil",
 
@@ -936,8 +858,6 @@
         "isHalal": true
     },
     {
-        "id": 40,
-
         "ingredient": "Garlic oil",
         "description": "Flavoured oil",
 
@@ -960,8 +880,6 @@
         "isHalal": true
     },
     {
-        "id": 41,
-
         "ingredient": "Truffle oil",
         "description": "Earthy rich oil",
 
@@ -984,8 +902,6 @@
         "isHalal": true
     },
     {
-        "id": 42,
-
         "ingredient": "Balsamic reduction",
         "description": "Sharp and sweet dark vinegar",
 
@@ -1008,8 +924,6 @@
         "isHalal": true
     },
     {
-        "id": 43,
-
         "ingredient": "Pesto",
         "description": "Basil, pine nut and parmesan paste",
 
@@ -1032,8 +946,6 @@
         "isHalal": true
     },
     {
-        "id": 44,
-
         "ingredient": "Pine nut",
         "description": "Small earthy nut",
 
@@ -1056,8 +968,6 @@
         "isHalal": true
     },
     {
-        "id": 45,
-
         "ingredient": "Pulled pork",
         "description": "Soft, slow-cooked shredded pork",
 
@@ -1080,8 +990,6 @@
         "isHalal": false
     },
     {
-        "id": 46,
-
         "ingredient": "Chicken",
         "description": "Sliced free-range chicken",
 
@@ -1104,8 +1012,6 @@
         "isHalal": true
     },
     {
-        "id": 47,
-
         "ingredient": "Chilli beef",
         "description": "Spicy minced chilli beef",
 
@@ -1128,8 +1034,6 @@
         "isHalal": true
     },
     {
-        "id": 48,
-
         "ingredient": "Ham",
         "description": "Sliced smoked ham",
 
@@ -1152,8 +1056,6 @@
         "isHalal": false
     },
     {
-        "id": 49,
-
         "ingredient": "Bacon",
         "description": "Crispy smoked streaky bacon",
 
@@ -1176,8 +1078,6 @@
         "isHalal": false
     },
     {
-        "id": 50,
-
         "ingredient": "Prosciutto",
         "description": "Italian cured ham",
 
@@ -1200,8 +1100,6 @@
         "isHalal": false
     },
     {
-        "id": 51,
-
         "ingredient": "Panchetta",
         "description": "Diced Italian ham",
 
@@ -1224,8 +1122,6 @@
         "isHalal": false
     },
     {
-        "id": 52,
-
         "ingredient": "Chorizo",
         "description": "Spanish spicy cured pork sausage",
 
@@ -1248,8 +1144,6 @@
         "isHalal": false
     },
     {
-        "id": 53,
-
         "ingredient": "Pepperoni",
         "description": "Spicy American pork and beef sausage",
 
@@ -1272,8 +1166,6 @@
         "isHalal": false
     },
     {
-        "id": 54,
-
         "ingredient": "Meatball",
         "description": "Minced beef meatball",
 
@@ -1296,8 +1188,6 @@
         "isHalal": true
     },
     {
-        "id": 55,
-
         "ingredient": "King prawn",
         "description": "Large juicy prawn",
 
@@ -1320,8 +1210,6 @@
         "isHalal": true
     },
     {
-        "id": 56,
-
         "ingredient": "Anchovy",
         "description": "Small salty fish",
 
@@ -1344,8 +1232,6 @@
         "isHalal": true
     },
     {
-        "id": 57,
-
         "ingredient": "Smoked Salmon",
         "description": "Sliced smoked cured salmon",
 
@@ -1368,8 +1254,6 @@
         "isHalal": true
     },
     {
-        "id": 58,
-
         "ingredient": "Tuna",
         "description": "Tinned tuna steak",
 
@@ -1392,8 +1276,6 @@
         "isHalal": true
     },
     {
-        "id": 59,
-
         "ingredient": "Thin crust",
         "description": "Thin crispy bread crust",
 
@@ -1416,8 +1298,6 @@
         "isHalal": true
     },
     {
-        "id": 60,
-
         "ingredient": "Deep pan",
         "description": "Thick chewy bread crust",
 
@@ -1440,8 +1320,6 @@
         "isHalal": true
     },
     {
-        "id": 61,
-
         "ingredient": "Cauliflower base",
         "description": "Gluten-free cauliflower crust",
 
@@ -1464,8 +1342,6 @@
         "isHalal": true
     },
     {
-        "id": 62,
-
         "ingredient": "Gluten-free",
         "description": "Crisp bread crust made with a mixture of non-gluten flours",
 
@@ -1488,8 +1364,6 @@
         "isHalal": true
     },
     {
-        "id": 63,
-
         "ingredient": "Mozzarella-stuffed crust",
         "description": "Thin crust bread with stuffed crust",
 
@@ -1512,8 +1386,6 @@
         "isHalal": true
     },
     {
-        "id": 64,
-
         "ingredient": "Garlic-stuffed crust",
         "description": "Thin crust bread with stuffed crust",
 

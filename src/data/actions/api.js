@@ -1,9 +1,9 @@
-import axios from "./Axios";
-import { setChoices } from "./state";
+import axios from "../axios";
+import { setIngredients } from "./state";
 
 export const getIngredients = () => dispatch => {
-    axios.get("/options").then(({ data }) => {
-      const ingredients = data;
-      dispatch(setChoices(ingredients));
+    axios.get("/options").then( response  => {
+      dispatch(setIngredients(response.data));
     });
   };
+

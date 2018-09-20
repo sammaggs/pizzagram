@@ -4,3 +4,10 @@ export const setChoices = choices => {
         choices: choices,
     }
 }
+
+export const setIngredients = data => {
+    return {
+        type: 'setIngredients',
+        data: data
+    }
+}
