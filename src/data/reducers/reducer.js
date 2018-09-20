@@ -1,6 +1,5 @@
 const setPizzaChoices = (state, choices) => {
     let choicesEntries = Object.entries(choices);
-    console.log(choicesEntries[0][0]);
     let newState = {
         ...state,
         pizzaChoices: {
