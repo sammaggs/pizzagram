@@ -1,10 +1,15 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import '../../styles/css/Header.css';
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
         <header className="jumbotron jumbotron-fluid text-light bg-info pizzagram-header">
-            <h1 className="display m-auto">pizzagram</h1>
+            <div className="container d-flex justify-content-center">
+                <Link to="/">
+                <h1 className="display m-auto text-light pizzagram-header-text">pizzagram</h1>
+                </Link>
+            </div>
         </header>
     )
 }

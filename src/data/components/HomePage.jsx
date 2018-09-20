@@ -19,7 +19,7 @@ class HomePage extends Component {
           </Link>
         </div>
         <div>
-          <Link className="btn btn-danger btn-lg m-3" to="/options">
+          <Link className="btn btn-success btn-lg m-3" to="/options">
             I'm Feeling Lucky <span role="img" aria-label="Four-leafed clover">🍀</span>
           </Link>
         </div>

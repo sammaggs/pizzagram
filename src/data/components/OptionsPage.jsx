@@ -30,7 +30,7 @@ class OptionsPage extends Component {
                 alt="Pizza base"
               />
               <div className="card-img-overlay">
-                <h2 className="card-title">Bases</h2>
+                <h2 className="card-title pizzagram-header-text">Bases</h2>
                 <Link className="btn btn-primary" to="/options/bases">Choose a base</Link>
               </div>
             </div>
@@ -42,7 +42,7 @@ class OptionsPage extends Component {
                   alt="Pizza sauce"
               />
               <div className="card-img-overlay">
-                <h2 className="card-title">Sauce</h2>
+                <h2 className="card-title pizzagram-header-text">Sauce</h2>
                 <Link className="btn btn-primary" to="/options/sauce">Choose a sauce</Link>
               </div>
             </div>
@@ -54,7 +54,7 @@ class OptionsPage extends Component {
                   alt="Pizza toppings"
               />
               <div className="card-img-overlay">
-                <h2 className="card-title">Toppings</h2>
+                <h2 className="card-title pizzagram-header-text">Toppings</h2>
                   <Link className="btn btn-primary" to="/options/toppings">Choose toppings</Link>
               </div>
 

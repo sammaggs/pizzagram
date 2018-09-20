@@ -52,7 +52,7 @@ class FinishedPage extends Component {
           }
         </section>
         <section>
-          <Link to="/options" className="btn btn-light">Back</Link>
+          <Link to="/options" className="btn btn-primary">Back</Link>
         </section>
       </main>
     );
