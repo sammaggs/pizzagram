@@ -11,9 +11,18 @@ const setPizzaChoices = (state, choices) => {
     return newState;
 }
 
+const setIngredients = (state, data) => {
+    let newState = {
+        ...state,
+        data : data.data
+    }
+    return newState;
+}
+
 const reducer = (state, action) => {
     switch (action.type) {
         case 'setChoices': return setPizzaChoices(state, action.choices);
+        case 'setIngredients': return setIngredients(state, action.data );
         default: return state;
     }
 };

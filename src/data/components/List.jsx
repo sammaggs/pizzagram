@@ -58,6 +58,10 @@ class List extends Component {
         return item[isOption];
     }
 
+    componentDidMount() {
+        this.props.onLoad();
+    }
+
     render () {
         const { data, option } = this.props;
         const relevantOptions = data.filter(item => this.relevantOptions(item, option));
