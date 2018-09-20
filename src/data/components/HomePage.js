@@ -37,7 +37,7 @@ class HomePage extends Component {
                 Build Your Own 🍕
               </Link>
               <Randomiser />
-              <Quantity />
+              {/* <Quantity /> */}
             </div>
         </div>
       </Fragment>

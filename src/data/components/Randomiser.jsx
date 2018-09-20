@@ -1,10 +1,7 @@
-// for (let i = 0, isBase = false, i += random) {
-
-// }
-
-
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Link } from "react-router-dom";
+import ingredients from '../ingredients.json';
+import RandomNumber from './RandomNumber';
 
 
 class Randomiser extends Component {
@@ -22,7 +19,39 @@ class Randomiser extends Component {
         });
     }
     spinThatWheel() {
-
+        const ingredientsByType = {
+            bases: [],
+            sauces: [],
+            toppings: []
+        }
+        const randomPizza = {
+            base: "",
+            sauce: "",
+            toppings: []
+        }
+        let isBase = false;
+        let isSauce = false;
+        let isTopping = false;
+        ingredients.map((index, ingredient) => {
+            if (isBase = true) {
+                ingredientsByType.bases.push(ingredient)
+            }
+            if (isSauce = true) {
+                ingredientsByType.sauces.push(ingredient)
+            }
+            if (isTopping = true) {
+                ingredientsByType.toppings.push(ingredient)
+            }
+        });
+        let baseChoice = ingredientsByType.bases[RandomNumber];
+        randomPizza.base = baseChoice;
+        let sauceChoice = ingredientsByType.sauces[RandomNumber];
+        randomPizza.sauce = sauceChoice;
+    
+        for (let i = 0; i <= +this.state.quantity; i += 1) {
+            let toppingChoice = ingredientsByType.toppings[RandomNumber];
+            randomPizza.toppings.push(toppingChoice);
+        }
     }
     render() {
         const buttonStyle = {
@@ -32,7 +61,7 @@ class Randomiser extends Component {
           }
         return(
             <Fragment>
-                <Link onclick={ spinThatWheel } style={buttonStyle} className="btn btn-primary" to="/options">
+                <Link onclick={ this.spinThatWheel } style={buttonStyle} className="btn btn-primary" to="/options">
                     I'm Feeling Lucky 🍀
                 </Link>
                 <div>
