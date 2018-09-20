@@ -1,1 +1,7 @@
-@import "./_bootstrap.scss"
+@import "./_bootstrap.scss";
+
+.pizzagram-header {
+    background-image: url(../../images/pizza-header.jpg);
+    background-size: cover;
+    background-position: center;
+};

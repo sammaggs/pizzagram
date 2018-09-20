@@ -66,23 +66,25 @@ class List extends Component {
         const { data, option } = this.props;
         const relevantOptions = data.filter(item => this.relevantOptions(item, option));
         return (
-            <ul className="list-group list-group-flush">
-                <fieldset>
-                { relevantOptions.length ? (
-                    Object.values(relevantOptions).map(item => (
-                        <li className="list-group-item" key={option + "-" + item.id}>
-                            <input id={item.id} name="ingredients" type="checkbox" onChange={ (e) => this.handleChange(e) } />
-                            <label htmlFor={item.id}>
-                            {item.ingredient}
-                            </label>
-                        </li>
-                    ))
-                ) : <p>No ingredients found. :(</p>
-                }
-                </fieldset>
-                <Link className="btn btn-primary" to="/options">Back</Link>
+            <section className="container">
+                <ul className="list-group list-group-flush">
+                    <fieldset>
+                    { relevantOptions.length ? (
+                        Object.values(relevantOptions).map(item => (
+                            <li className="list-group-item" key={option + "-" + item.id}>
+                                <input id={item.id} name="ingredients" type="checkbox" onChange={ (e) => this.handleChange(e) } />
+                                <label htmlFor={item.id}>
+                                {item.ingredient}
+                                </label>
+                            </li>
+                        ))
+                    ) : <p>No ingredients found. :(</p>
+                    }
+                    </fieldset>
+                    <Link className="btn btn-primary" to="/options">Back</Link>
+                </ul>
                 <Button onClick={ this.handleSave } buttonText="Save Choices" colourTheme="success"></Button>
-            </ul>
+            </section>
         )
     }
 };

@@ -12,22 +12,18 @@ class HomePage extends Component {
 
   render() {
     return (
-      <Fragment>
-        <div className="container-fluid d-flex flex-column align-items-center">
-            <img src={pizzaGram} />
-            <img src={pizzaImage} />
-            <div>
-              <Link className="btn btn-primary btn-lg" to="/options">
-                Build Your Own 🍕
-              </Link>
-            </div>
-            <div>
-              <Link className="btn btn-danger btn-sm" to="/options">
-                I'm Feeling Lucky 🍀
-              </Link>
-            </div>
+      <main className="container d-flex flex-column flex-lg-row justify-content-around align-items-center">
+        <div>
+          <Link className="btn btn-primary btn-lg m-3" to="/options">
+            Build Your Own <span role="img" aria-label="Pizza">🍕</span>
+          </Link>
         </div>
-      </Fragment>
+        <div>
+          <Link className="btn btn-danger btn-lg m-3" to="/options">
+            I'm Feeling Lucky <span role="img" aria-label="Four-leafed clover">🍀</span>
+          </Link>
+        </div>
+      </main>
     );
   }
 }

@@ -10,11 +10,11 @@ class FinishedPage extends Component {
   render() {
     const { data, chosenBase, chosenSauce, chosenToppings } = this.props;
     return (
-      <React.Fragment>
+      <main className="container text-light">
         <h1>
           Your Pizza
         </h1>
-        <small className="text-muted">We're not judging...</small>
+        <small className="text-primary">We're not judging...</small>
         <section>
           <h2>Base</h2>
           { Object.keys(chosenBase).length ?
@@ -24,7 +24,7 @@ class FinishedPage extends Component {
                   <li className="list-group-item" key={ "base-" + index }>{ data.filter(ingredient => ingredient.id === +item).map(object => object.ingredient) }</li>
                 )
               }) }
-            </ul> : <p className="text-muted">You haven't chosen a pizza base.</p>
+            </ul> : <p className="text-primary">You haven't chosen a pizza base.</p>
           }
         </section>
         <section>
@@ -36,7 +36,7 @@ class FinishedPage extends Component {
                   <li className="list-group-item" key={ "sauce-" + index }>{ data.filter(ingredient => ingredient.id === +item).map(object => object.ingredient) }</li>
                 )
               }) }
-            </ul> : <p className="text-muted">You haven't chosen a sauce for your pizza.</p>
+            </ul> : <p className="text-primary">You haven't chosen a sauce for your pizza.</p>
           }
         </section>
         <section>
@@ -48,13 +48,13 @@ class FinishedPage extends Component {
                   <li className="list-group-item" key={ "topping-" + index }>{ data.filter(ingredient => ingredient.id === +item).map(object => object.ingredient) }</li>
                 )
               }) }
-            </ul> : <p className="text-muted">You haven't chosen any toppings for your pizza.</p>
+            </ul> : <p className="text-primary">You haven't chosen any toppings for your pizza.</p>
           }
         </section>
         <section>
-          <Link to="/options" className="btn btn-outline-dark">Back</Link>
+          <Link to="/options" className="btn btn-light">Back</Link>
         </section>
-      </React.Fragment>
+      </main>
     );
   }
 }
