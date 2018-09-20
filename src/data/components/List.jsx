@@ -79,7 +79,7 @@ class List extends Component {
 
         let content;
 
-        if (!data) {
+        if (data) {
             content = <LoadingSpinner />;
           } else { content = 
             <ul className="list-group list-group-flush">
