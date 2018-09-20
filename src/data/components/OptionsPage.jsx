@@ -21,7 +21,7 @@ class OptionsPage extends Component {
     return (
       <Fragment>
         <section className="d-flex flex-column align-items-center container">
-          <div className="d-flex flex-column flex-lg-row align-items-center justify-content-stretch text-center text-light card-deck">
+          <div className="d-flex flex-column flex-lg-row align-items-center text-center text-light card-deck">
 
             <div className="card d-flex flex-column align-middle m-3 border-0">
               <img
@@ -35,7 +35,7 @@ class OptionsPage extends Component {
               </div>
             </div>
 
-            <div className="card d-flex flex-column justify-content-center align-middle m-3 border-0">
+            <div className="card d-flex flex-column justify-content-center m-3 border-0">
               <img
                   src={sauceOptions}
                   className="card-img-top"
