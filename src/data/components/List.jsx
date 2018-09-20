@@ -82,24 +82,32 @@ class List extends Component {
         if (!data) {
             content = <LoadingSpinner />;
           } else { content = 
-            <ul className="list-group list-group-flush">
-                <fieldset>
-                { relevantOptions.length ? (
-                    Object.values(relevantOptions).map(item => (
-                        <li className="list-group-item" key={option + "-" + item.id}>
-                            <input id={item.id} name="ingredients" type="checkbox" onChange={ (e) => this.handleChange(e) } />
-                            <label htmlFor={item.id}>
-                            {item.ingredient}
-                            </label>
-                        </li>
-                    ))
-                ) : <LoadingSpinner />
-                }
-                </fieldset>
-                <Link className="btn btn-primary" to="/options">Back</Link>
-                <Button onClick={ this.handleSave } buttonText="Save Choices" colourTheme="success"></Button>
-            </ul>
-          }
+            <main className="container">
+                <ul className="list-group my-3">
+                    <fieldset>
+                    { relevantOptions.length ? (
+                        Object.values(relevantOptions).map(item => (
+                            <li className="list-group-item" key={option + "-" + item.id}>
+                                <input id={item.id} name="ingredients" type="checkbox" onChange={ (e) => this.handleChange(e) } />
+                                <label htmlFor={item.id}>
+                                {item.ingredient}
+                                </label>
+                            </li>
+                        ))
+                    ) : <LoadingSpinner />
+                    }
+                    </fieldset>
+                </ul>
+                <div className="d-flex justify-content-between pb-5">
+                    <div className="back-button-container w-25 mr-2">
+                        <Link className="btn btn-primary btn-block" to="/options">&lt; Back</Link>
+                    </div>
+                    <div className="save-button-container w-75 ml-2">
+                        <Button onClick={ this.handleSave } buttonText="Save Choices" colourTheme="success" isBlock={true} />
+                    </div>
+                </div>
+            </main>
+          };
 
         return (
             <div>

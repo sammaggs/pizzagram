@@ -21,16 +21,16 @@ class OptionsPage extends Component {
     return (
       <Fragment>
         <section className="d-flex flex-column align-items-center container">
-          <div className="d-flex flex-column flex-lg-row align-items-center text-center text-light card-deck">
+          <div className="d-flex flex-column flex-lg-row align-items-center justify-content-stretch text-center text-light card-deck">
 
-            <div className="card d-flex flex-column justify-content-center align-middle m-3 border-0">
+            <div className="card d-flex flex-column align-middle m-3 border-0">
               <img
                 src={baseOptions}
                 className="card-img"
                 alt="Pizza base"
               />
               <div className="card-img-overlay">
-                <h2 className="card-title pizzagram-header-text">Bases</h2>
+                <h2 className="card-title pizzagram-header-text pizzagram-text-shadow">Bases</h2>
                 <Link className="btn btn-primary" to="/options/bases">Choose a base</Link>
               </div>
             </div>
@@ -42,7 +42,7 @@ class OptionsPage extends Component {
                   alt="Pizza sauce"
               />
               <div className="card-img-overlay">
-                <h2 className="card-title pizzagram-header-text">Sauce</h2>
+                <h2 className="card-title pizzagram-header-text pizzagram-text-shadow">Sauce</h2>
                 <Link className="btn btn-primary" to="/options/sauce">Choose a sauce</Link>
               </div>
             </div>
@@ -54,7 +54,7 @@ class OptionsPage extends Component {
                   alt="Pizza toppings"
               />
               <div className="card-img-overlay">
-                <h2 className="card-title pizzagram-header-text">Toppings</h2>
+                <h2 className="card-title pizzagram-header-text pizzagram-text-shadow">Toppings</h2>
                   <Link className="btn btn-primary" to="/options/toppings">Choose toppings</Link>
               </div>
 

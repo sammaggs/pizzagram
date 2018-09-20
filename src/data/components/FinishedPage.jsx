@@ -11,12 +11,12 @@ class FinishedPage extends Component {
     const { data, chosenBase, chosenSauce, chosenToppings } = this.props;
     return (
       <main className="container text-light">
-        <h1>
+        <h1 className="pizzagram-header-text">
           Your Pizza
         </h1>
         <small className="text-primary">We're not judging...</small>
         <section>
-          <h2>Base</h2>
+          <h2 className="pizzagram-header-text">Base</h2>
           { Object.keys(chosenBase).length ?
             <ul className="list-group list-group-flush">
               { chosenBase.map((item, index) => {
@@ -28,7 +28,7 @@ class FinishedPage extends Component {
           }
         </section>
         <section>
-          <h2>Sauce</h2>
+          <h2 className="pizzagram-header-text">Sauce</h2>
           { Object.keys(chosenSauce).length !== 0 ?
             <ul className="list-group list-group-flush">
               { chosenSauce.map((item, index) => {
@@ -40,7 +40,7 @@ class FinishedPage extends Component {
           }
         </section>
         <section>
-          <h2>Toppings</h2>
+          <h2 className="pizzagram-header-text">Toppings</h2>
           { Object.keys(chosenToppings).length !== 0 ?
             <ul className="list-group list-group-flush">
               { chosenToppings.map((item, index) => {
@@ -52,7 +52,7 @@ class FinishedPage extends Component {
           }
         </section>
         <section>
-          <Link to="/options" className="btn btn-primary">Back</Link>
+          <Link to="/options" className="btn btn-primary">&lt; Back</Link>
         </section>
       </main>
     );

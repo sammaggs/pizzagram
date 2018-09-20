@@ -7,7 +7,7 @@ const Header = () => {
         <header className="jumbotron jumbotron-fluid text-light bg-info pizzagram-header">
             <div className="container d-flex justify-content-center">
                 <Link to="/">
-                <h1 className="display m-auto text-light pizzagram-header-text">pizzagram</h1>
+                <h1 className="display text-light pizzagram-header-text pizzagram-text-shadow">pizzagram</h1>
                 </Link>
             </div>
         </header>
