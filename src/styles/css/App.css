@@ -3613,7 +3613,7 @@ input[type="button"].btn-block {
     background-color: #C0392B; }
   .list-group-item.active {
     z-index: 2;
-    color: #fff;
+    color: #333333;
     background-color: #F1C40F;
     border-color: #F1C40F; }
 

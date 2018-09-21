@@ -90,16 +90,19 @@ class List extends Component {
             <main className="container text-light">
                 <h2 className="pizzagram-header-text">{ option.substring(0,1).toUpperCase() + option.substring(1) }</h2>
                 <div className="list-group list-group-flush my-3">
-                    <fieldset>
+                    <div>
                     { relevantOptions.length ? (
                         Object.values(relevantOptions).map(item => { return (
-                            <button className={"list-group-item list-group-item-action text-light" + (this.state.choices[this.props.option].indexOf(item.id.toString()) !== -1 ? " active clicked" : "")} key={option + "-" + item.id} id={item.id} onClick={ (e) => this.handleItemSelect(e) }>
-                                {item.ingredient}
+                            <button className={"list-group-item list-group-item-action d-flex align-items-baseline text-light" + (this.state.choices[this.props.option].indexOf(item.id.toString()) !== -1 ? " active clicked" : "")} key={option + "-" + item.id} id={item.id} onClick={ (e) => this.handleItemSelect(e) }>
+                                <div><p className="lead px-1">{item.ingredient}</p></div>
+                                <div>
+                                    <small className="px-3">{ item.description }</small>
+                                </div>
                             </button>
                         )})
                     ) : <LoadingSpinner />
                     }
-                    </fieldset>
+                    </div>
                 </div>
                 <div className="d-flex justify-content-between">
                     <div className="back-button-container w-25 mr-2">
