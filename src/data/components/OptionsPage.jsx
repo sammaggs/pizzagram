@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from "react";
-// import Button from "./Button";
 import baseOptions from "../../images/base.jpg";
 import sauceOptions from "../../images/sauces.jpg";
 import toppingOptions from "../../images/ingredients.jpg";

@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 import '../../styles/css/App.css';
 
 class FinishedPage extends Component {
-  constructor(props) {
-    super(props);
-  }
-
+  
   render() {
     const { data, chosenBase, chosenSauce, chosenToppings } = this.props;
     return (
