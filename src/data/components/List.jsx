@@ -1,25 +1,47 @@
 import React, { Component } from "react";
 import Button from "./Button";
 import { Link } from "react-router-dom";
-
+import '../../styles/css/List.css';
+import '../../styles/css/App.css';
 
 class List extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            choices : []
+            choices : {
+                [this.props.option]: [],
+            }
         }
-        
         this.relevantOptions = this.relevantOptions.bind(this);
-        this.onChange = this.onChange.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSave = this.handleSave.bind(this);
     }
 
-    componentDidMount() {
-        this.props.onLoad();
+    handleChange(e) {
+        if (e.target.checked) {
+            this.setState({
+                choices: {
+                    ...this.state.choices,
+                    [this.props.option]: [
+                        ...this.state.choices[this.props.option],
+                        e.target.id
+                    ]
+                }
+            })
+        } else {
+            let newState = {...this.state}
+            let changedChoices = newState.choices[this.props.option].filter(item => item !== e.target.id)
+            this.setState({
+                choices: {
+                    ...this.state.choices,
+                    [this.props.option]: changedChoices
+                }
+            })
+        }
     }
 
-    onChange(e) {
-        console.log("Do something with your onChange");
+    handleSave() {
+        this.props.onSave(this.state.choices);
     }
 
     relevantOptions(item, option) {
@@ -36,28 +58,30 @@ class List extends Component {
         return item[isOption];
     }
 
+    componentDidMount() {
+        this.props.onLoad();
+    }
+
     render () {
         const { data, option } = this.props;
         const relevantOptions = data.filter(item => this.relevantOptions(item, option));
         return (
-            <ul className="list-group">
+            <ul className="list-group list-group-flush">
                 <fieldset>
                 { relevantOptions.length ? (
-                    Object.values(relevantOptions).map((item, index) => (
-                        <React.Fragment>
-                        <li className="list-group-item" key={index}>
-                            <input id={index} name="ingredients" type="checkbox" onChange={ (e) => this.onChange(e) } />
-                            <label htmlFor={index} >
+                    Object.values(relevantOptions).map(item => (
+                        <li className="list-group-item" key={option + "-" + item.id}>
+                            <input id={item.id} name="ingredients" type="checkbox" onChange={ (e) => this.handleChange(e) } />
+                            <label htmlFor={item.id}>
                             {item.ingredient}
                             </label>
                         </li>
-                        </React.Fragment>
                     ))
                 ) : <p>No ingredients found. :(</p>
                 }
                 </fieldset>
                 <Link className="btn btn-primary" to="/options">Back</Link>
-                <Link className="btn btn-primary" to="/options/finished/">Save Choices</Link>
+                <Button onClick={ this.handleSave } buttonText="Save Choices" colourTheme="success"></Button>
             </ul>
         )
     }

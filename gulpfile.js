@@ -11,10 +11,12 @@ function defaultTask(done) {
 }
 
 gulp.task('sass', function () {
-    return gulp.src('./src/styles/scss/styles.scss')
+    return gulp.src('./src/styles/scss/*.scss')
         .pipe(sass())
         .pipe(gulp.dest('./src/styles/css/'))
-        .pipe(rename('styles.css'));
+        .pipe(rename({
+            extname: '.css'
+        }));
 });
 
 gulp.task('watch', function () {
