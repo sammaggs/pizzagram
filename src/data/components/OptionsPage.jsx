@@ -17,6 +17,7 @@ class OptionsPage extends Component {
   }
 
   render() {
+    const { data, currentChoices } = this.props;
     return (
       <Fragment>
         <section className="d-flex flex-column align-items-center container">
@@ -30,7 +31,7 @@ class OptionsPage extends Component {
               />
               <div className="card-img-overlay">
                 <h2 className="card-title pizzagram-header-text pizzagram-text-shadow">Bases</h2>
-                <Link className="btn btn-primary" to="/options/bases">Choose a base</Link>
+                <Link className={"btn btn" + (currentChoices.bases.length ? "-success" : "-primary")} to="/options/bases">Choose a base</Link>
               </div>
             </div>
 
@@ -42,7 +43,7 @@ class OptionsPage extends Component {
               />
               <div className="card-img-overlay">
                 <h2 className="card-title pizzagram-header-text pizzagram-text-shadow">Sauce</h2>
-                <Link className="btn btn-primary" to="/options/sauce">Choose a sauce</Link>
+                <Link className={"btn btn" + (currentChoices.sauce.length ? "-success" : "-primary")} to="/options/sauce">Choose a sauce</Link>
               </div>
             </div>
 
@@ -54,7 +55,7 @@ class OptionsPage extends Component {
               />
               <div className="card-img-overlay">
                 <h2 className="card-title pizzagram-header-text pizzagram-text-shadow">Toppings</h2>
-                  <Link className="btn btn-primary" to="/options/toppings">Choose toppings</Link>
+                  <Link className={"btn btn" + (currentChoices.toppings.length ? "-success" : "-primary")} to="/options/toppings">Choose toppings</Link>
               </div>
 
             </div>

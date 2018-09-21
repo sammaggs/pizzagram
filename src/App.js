@@ -5,7 +5,7 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
-import OptionsPage from './data/components/OptionsPage';
+import OptionsPage from './data/containers/OptionsPage';
 import FinishedPage from './data/containers/FinishedPage';
 import List from './data/containers/List';
 import FourOhFour from './data/components/FourOhFour';
