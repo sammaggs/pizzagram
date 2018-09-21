@@ -1,5 +1,4 @@
 import React from "react";
-import '../../styles/css/App.css';
 
 const Button = ({ buttonText, onClick, colourTheme, isBlock } ) => {
     return (

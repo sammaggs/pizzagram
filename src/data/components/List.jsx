@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import Button from "./Button";
 import { Link } from "react-router-dom";
-import '../../styles/css/List.css';
-import '../../styles/css/App.css';
 import LoadingSpinner  from './LoadingSpinner';
 
 class List extends Component {
@@ -108,13 +106,13 @@ class List extends Component {
         if (!data) {
             content = <LoadingSpinner />;
           } else { content = 
-            <main className="container">
-                <h2 className="pizzagram-header-text text-light">{ option.substring(0,1).toUpperCase() + option.substring(1) }</h2>
-                <div className="list-group my-3">
+            <main className="container text-light">
+                <h2 className="pizzagram-header-text">{ option.substring(0,1).toUpperCase() + option.substring(1) }</h2>
+                <div className="list-group list-group-flush my-3">
                     <fieldset>
                     { relevantOptions.length ? (
                         Object.values(relevantOptions).map(item => (
-                            <button className="list-group-item list-group-item-action" key={option + "-" + item.id} id={item.id} onClick={ (e) => this.handleItemSelect(e) }>
+                            <button className="list-group-item list-group-item-action text-light" key={option + "-" + item.id} id={item.id} onClick={ (e) => this.handleItemSelect(e) }>
                                 {item.ingredient}
                             </button>
                         ))

@@ -4,7 +4,6 @@ import baseOptions from "../../images/pizza-dough.jpg";
 import sauceOptions from "../../images/pizza-sauce.jpg";
 import toppingOptions from "../../images/pizza-toppings.jpg";
 import { Link } from "react-router-dom";
-import '../../styles/css/App.css';
 
 
 class OptionsPage extends Component {

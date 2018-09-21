@@ -10,6 +10,10 @@ $theme-colors: (
 
 $body-bg: #C0392B;
 
+$list-group-bg: #C0392B;
+$list-group-hover-bg: #E74C3C;
+$list-group-action-active-bg: #E74C3C;
+
 // Required Bootstrap imports
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
