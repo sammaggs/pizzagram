@@ -15,6 +15,10 @@ class FinishedPage extends Component {
 
   render() {
     const { data, chosenBase, chosenSauce, chosenToppings } = this.props;
+    const inputStyling = {
+      marginTop: 20,
+    }
+
     return (
       <main className="container text-light">
         <header className="mb-4">
@@ -66,6 +70,10 @@ class FinishedPage extends Component {
           <div className="save-button-container w-75 ml-2">
               <Button onClick={ this.handleShare } buttonText="Share Your Pizza" colourTheme="success" isBlock={true} />
           </div>
+        </section>
+        <section style={inputStyling}>
+          <input name="email" type="email" />
+          <input name="submit" type="submit" />
         </section>
       </main>
     );
