@@ -8,6 +8,7 @@ class List extends Component {
         super(props);
         this.state = {
             loading: true,
+            modified: false,
             choices: {
                 [this.props.option]: [
                     ...this.props.currentChoices[this.props.option]
@@ -29,6 +30,7 @@ class List extends Component {
 
     handleSave() {
         this.props.onSave(this.state.choices);
+        this.setState({modified: false})
     }
 
     handleItemSelect(e) {
@@ -36,6 +38,7 @@ class List extends Component {
             let newState = {...this.state}
             let changedChoices = newState.choices[this.props.option].filter(item => item !== e.currentTarget.id)
             this.setState({
+                modified: true,
                 choices: {
                     ...this.state.choices,
                     [this.props.option]: [
@@ -45,6 +48,7 @@ class List extends Component {
             })
         } else {
             this.setState({
+                modified: true,
                 choices: {
                     ...this.state.choices,
                     [this.props.option]: [
@@ -102,7 +106,7 @@ class List extends Component {
                         <Link className="btn btn-primary btn-block" to="/options">&lt; Back</Link>
                     </div>
                     <div className="save-button-container w-75 ml-2">
-                        <Button onClick={ this.handleSave } buttonText="Save Choices" colourTheme="success" isBlock={true} />
+                        <Button onClick={ this.handleSave } buttonText="Save Choices" colourTheme="success" isBlock={true} isDisabled={ !this.state.modified } />
                     </div>
                 </div>
             </main>

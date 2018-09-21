@@ -1,8 +1,8 @@
 import React from "react";
 
-const Button = ({ buttonText, onClick, colourTheme, isBlock } ) => {
+const Button = ({ buttonText, onClick, colourTheme, isBlock, isDisabled } ) => {
     return (
-        <button onClick={onClick} className={"btn btn-" + colourTheme + (isBlock ? " btn-block" : null)}>{buttonText}</button>
+        <button onClick={onClick} className={"btn btn-" + colourTheme + (isBlock ? " btn-block" : null)} disabled={isDisabled}>{buttonText}</button>
     )
 };
 
