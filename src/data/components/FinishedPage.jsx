@@ -59,7 +59,7 @@ class FinishedPage extends Component {
             </ul> : <p className="text-primary">You haven't chosen any toppings for your pizza.</p>
           }
         </section>
-        <section className="button-container d-flex justify-content-between my-4 pb-5">
+        <section className="button-container d-flex justify-content-between my-4">
           <div className="back-button-container w-25 mr-2">
               <Link className="btn btn-primary btn-block" to="/options">&lt; Back</Link>
           </div>

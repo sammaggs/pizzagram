@@ -98,7 +98,7 @@ class List extends Component {
                     }
                     </fieldset>
                 </div>
-                <div className="d-flex justify-content-between pb-5">
+                <div className="d-flex justify-content-between">
                     <div className="back-button-container w-25 mr-2">
                         <Link className="btn btn-primary btn-block" to="/options">&lt; Back</Link>
                     </div>
