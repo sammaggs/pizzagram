@@ -75,7 +75,6 @@ class List extends Component {
     }
 
     render () {
-        console.log(this.state.choices[this.props.option]);
         const { data, option } = this.props;
         const relevantOptions = data.filter(item => this.relevantOptions(item, option));
 
