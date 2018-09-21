@@ -9,6 +9,10 @@ class FinishedPage extends Component {
 
   render() {
     const { data, chosenBase, chosenSauce, chosenToppings } = this.props;
+    const inputStyling = {
+      marginTop: 20,
+    }
+
     return (
       <main className="container text-light">
         <h1 className="pizzagram-header-text">
@@ -53,6 +57,10 @@ class FinishedPage extends Component {
         </section>
         <section>
           <Link to="/options" className="btn btn-primary">&lt; Back</Link>
+        </section>
+        <section style={inputStyling}>
+          <input name="email" type="email" />
+          <input name="submit" type="submit" />
         </section>
       </main>
     );
