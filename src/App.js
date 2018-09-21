@@ -5,11 +5,12 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
-import OptionsPage from './data/components/OptionsPage';
+import OptionsPage from './data/containers/OptionsPage';
 import FinishedPage from './data/containers/FinishedPage';
 import List from './data/containers/List';
 import FourOhFour from './data/components/FourOhFour';
 import Header from './data/components/Header';
+import Footer from './data/components/Footer';
 
 class App extends Component {
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
             <Route exact path="/finished" component={ FinishedPage } />
             <Route component={FourOhFour} />
           </Switch>
+          <Footer />
         </Fragment>
     );
   }

@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import Button from "./Button";
 import { Link } from "react-router-dom";
-import '../../styles/css/List.css';
-import '../../styles/css/App.css';
-// import axios from "../axios";
 import LoadingSpinner  from './LoadingSpinner';
 
 class List extends Component {
@@ -11,13 +8,16 @@ class List extends Component {
         super(props);
         this.state = {
             loading: true,
-            choices : {
-                [this.props.option]: [],
+            modified: false,
+            choices: {
+                [this.props.option]: [
+                    ...this.props.currentChoices[this.props.option]
+                ]
             }
         }
         this.relevantOptions = this.relevantOptions.bind(this);
-        this.handleChange = this.handleChange.bind(this);
         this.handleSave = this.handleSave.bind(this);
+        this.handleItemSelect = this.handleItemSelect.bind(this);
     }
 
     componentDidMount () {
@@ -28,31 +28,36 @@ class List extends Component {
         }) : null;
     };
 
-    handleChange(e) {
-        if (e.target.checked) {
+    handleSave() {
+        this.props.onSave(this.state.choices);
+        this.setState({modified: false})
+    }
+
+    handleItemSelect(e) {
+        if (this.state.choices[this.props.option].indexOf(e.currentTarget.id) !== -1) {
+            let newState = {...this.state}
+            let changedChoices = newState.choices[this.props.option].filter(item => item !== e.currentTarget.id)
             this.setState({
+                modified: true,
                 choices: {
                     ...this.state.choices,
                     [this.props.option]: [
-                        ...this.state.choices[this.props.option],
-                        e.target.id
+                        ...changedChoices
                     ]
                 }
             })
         } else {
-            let newState = {...this.state}
-            let changedChoices = newState.choices[this.props.option].filter(item => item !== e.target.id)
             this.setState({
+                modified: true,
                 choices: {
                     ...this.state.choices,
-                    [this.props.option]: changedChoices
+                    [this.props.option]: [
+                        ...this.state.choices[this.props.option],
+                        e.currentTarget.id
+                    ]
                 }
             })
         }
-    }
-
-    handleSave() {
-        this.props.onSave(this.state.choices);
     }
 
     relevantOptions(item, option) {
@@ -82,29 +87,26 @@ class List extends Component {
         if (!data) {
             content = <LoadingSpinner />;
           } else { content = 
-            <main className="container">
-                <h2 className="pizzagram-header-text text-light">{ option.substring(0,1).toUpperCase() + option.substring(1) }</h2>
-                <ul className="list-group my-3">
+            <main className="container text-light">
+                <h2 className="pizzagram-header-text">{ option.substring(0,1).toUpperCase() + option.substring(1) }</h2>
+                <div className="list-group list-group-flush my-3">
                     <fieldset>
                     { relevantOptions.length ? (
-                        Object.values(relevantOptions).map(item => (
-                            <li className="list-group-item" key={option + "-" + item.id}>
-                                <input id={item.id} name="ingredients" type="checkbox" onChange={ (e) => this.handleChange(e) } />
-                                <label htmlFor={item.id}>
+                        Object.values(relevantOptions).map(item => { return (
+                            <button className={"list-group-item list-group-item-action text-light" + (this.state.choices[this.props.option].indexOf(item.id.toString()) !== -1 ? " active clicked" : "")} key={option + "-" + item.id} id={item.id} onClick={ (e) => this.handleItemSelect(e) }>
                                 {item.ingredient}
-                                </label>
-                            </li>
-                        ))
+                            </button>
+                        )})
                     ) : <LoadingSpinner />
                     }
                     </fieldset>
-                </ul>
-                <div className="d-flex justify-content-between pb-5">
+                </div>
+                <div className="d-flex justify-content-between">
                     <div className="back-button-container w-25 mr-2">
                         <Link className="btn btn-primary btn-block" to="/options">&lt; Back</Link>
                     </div>
                     <div className="save-button-container w-75 ml-2">
-                        <Button onClick={ this.handleSave } buttonText="Save Choices" colourTheme="success" isBlock={true} />
+                        <Button onClick={ this.handleSave } buttonText="Save Choices" colourTheme="success" isBlock={true} isDisabled={ !this.state.modified } />
                     </div>
                 </div>
             </main>

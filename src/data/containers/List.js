@@ -6,6 +6,7 @@ import { getIngredients } from '../actions/api';
 const mapStateToProps = (state, {option}) => {
     return {
         data: state.data,
+        currentChoices: state.pizzaChoices,
         option: option
     }
 }

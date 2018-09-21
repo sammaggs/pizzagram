@@ -14,3 +14,19 @@
 .pizzagram-text-shadow {
     text-shadow: 0px 2px 5px #333;
 }
+
+input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    ::-ms-check {
+        display: none;
+    }
+}
+
+// footer {
+//     position: fixed;
+//     left: 0px;
+//     bottom: 0px;
+//     height: 30px;
+//     width: 100%;
+// }

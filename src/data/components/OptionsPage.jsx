@@ -4,7 +4,6 @@ import baseOptions from "../../images/pizza-dough.jpg";
 import sauceOptions from "../../images/pizza-sauce.jpg";
 import toppingOptions from "../../images/pizza-toppings.jpg";
 import { Link } from "react-router-dom";
-import '../../styles/css/App.css';
 
 
 class OptionsPage extends Component {
@@ -18,10 +17,11 @@ class OptionsPage extends Component {
   }
 
   render() {
+    const { data, currentChoices } = this.props;
     return (
       <Fragment>
         <section className="d-flex flex-column align-items-center container">
-          <div className="d-flex flex-column flex-lg-row align-items-center justify-content-stretch text-center text-light card-deck">
+          <div className="d-flex flex-column flex-lg-row align-items-center text-center text-light card-deck">
 
             <div className="card d-flex flex-column align-middle m-3 border-0">
               <img
@@ -31,11 +31,11 @@ class OptionsPage extends Component {
               />
               <div className="card-img-overlay">
                 <h2 className="card-title pizzagram-header-text pizzagram-text-shadow">Bases</h2>
-                <Link className="btn btn-primary" to="/options/bases">Choose a base</Link>
+                <Link className={"btn btn" + (currentChoices.bases.length ? "-success" : "-primary")} to="/options/bases">Choose a base</Link>
               </div>
             </div>
 
-            <div className="card d-flex flex-column justify-content-center align-middle m-3 border-0">
+            <div className="card d-flex flex-column justify-content-center m-3 border-0">
               <img
                   src={sauceOptions}
                   className="card-img-top"
@@ -43,7 +43,7 @@ class OptionsPage extends Component {
               />
               <div className="card-img-overlay">
                 <h2 className="card-title pizzagram-header-text pizzagram-text-shadow">Sauce</h2>
-                <Link className="btn btn-primary" to="/options/sauce">Choose a sauce</Link>
+                <Link className={"btn btn" + (currentChoices.sauce.length ? "-success" : "-primary")} to="/options/sauce">Choose a sauce</Link>
               </div>
             </div>
 
@@ -55,7 +55,7 @@ class OptionsPage extends Component {
               />
               <div className="card-img-overlay">
                 <h2 className="card-title pizzagram-header-text pizzagram-text-shadow">Toppings</h2>
-                  <Link className="btn btn-primary" to="/options/toppings">Choose toppings</Link>
+                  <Link className={"btn btn" + (currentChoices.toppings.length ? "-success" : "-primary")} to="/options/toppings">Choose toppings</Link>
               </div>
 
             </div>
