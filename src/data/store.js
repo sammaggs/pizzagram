@@ -8,8 +8,12 @@ const initial = {
   pizzaChoices: {
     bases: [],
     sauce: [],
+    toppings: [],
+  randomPizza: {
+    base: "",
+    sauce: "",
     toppings: []
-  },
+  }},
 };
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

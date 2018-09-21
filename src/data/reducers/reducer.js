@@ -23,6 +23,7 @@ const reducer = (state, action) => {
     switch (action.type) {
         case 'setChoices': return setPizzaChoices(state, action.choices);
         case 'setIngredients': return setIngredients(state, action.data );
+        case 'feelingLucky': return {...state}
         default: return state;
     }
 };

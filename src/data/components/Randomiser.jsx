@@ -24,11 +24,11 @@ class Randomiser extends Component {
             sauces: [],
             toppings: []
         }
-        const randomPizza = {
-            base: "",
-            sauce: "",
-            toppings: []
-        }
+        // const randomPizza = {
+        //     base: "",
+        //     sauce: "",
+        //     toppings: []
+        // }
         let isBase = false;
         let isSauce = false;
         let isTopping = false;
