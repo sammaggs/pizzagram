@@ -9,11 +9,12 @@ class List extends Component {
         this.state = {
             loading: true,
             choices: {
-                [this.props.option]: [],
+                [this.props.option]: [
+                    ...this.props.currentChoices[this.props.option]
+                ]
             }
         }
         this.relevantOptions = this.relevantOptions.bind(this);
-        this.handleChange = this.handleChange.bind(this);
         this.handleSave = this.handleSave.bind(this);
         this.handleItemSelect = this.handleItemSelect.bind(this);
     }
@@ -26,35 +27,11 @@ class List extends Component {
         }) : null;
     };
 
-    handleChange(e) {
-        if (e.target.checked) {
-            this.setState({
-                choices: {
-                    ...this.state.choices,
-                    [this.props.option]: [
-                        ...this.state.choices[this.props.option],
-                        e.target.id
-                    ]
-                }
-            })
-        } else {
-            let newState = {...this.state}
-            let changedChoices = newState.choices[this.props.option].filter(item => item !== e.target.id)
-            this.setState({
-                choices: {
-                    ...this.state.choices,
-                    [this.props.option]: changedChoices
-                }
-            })
-        }
-    }
-
     handleSave() {
         this.props.onSave(this.state.choices);
     }
 
     handleItemSelect(e) {
-        e.currentTarget.classList.toggle('active')
         if (this.state.choices[this.props.option].indexOf(e.currentTarget.id) !== -1) {
             let newState = {...this.state}
             let changedChoices = newState.choices[this.props.option].filter(item => item !== e.currentTarget.id)
@@ -98,6 +75,7 @@ class List extends Component {
     }
 
     render () {
+        console.log(this.state.choices[this.props.option]);
         const { data, option } = this.props;
         const relevantOptions = data.filter(item => this.relevantOptions(item, option));
 
@@ -111,11 +89,11 @@ class List extends Component {
                 <div className="list-group list-group-flush my-3">
                     <fieldset>
                     { relevantOptions.length ? (
-                        Object.values(relevantOptions).map(item => (
-                            <button className="list-group-item list-group-item-action text-light" key={option + "-" + item.id} id={item.id} onClick={ (e) => this.handleItemSelect(e) }>
+                        Object.values(relevantOptions).map(item => { return (
+                            <button className={"list-group-item list-group-item-action text-light" + (this.state.choices[this.props.option].indexOf(item.id.toString()) !== -1 ? " active clicked" : "")} key={option + "-" + item.id} id={item.id} onClick={ (e) => this.handleItemSelect(e) }>
                                 {item.ingredient}
                             </button>
-                        ))
+                        )})
                     ) : <LoadingSpinner />
                     }
                     </fieldset>
