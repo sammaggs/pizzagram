@@ -71,10 +71,10 @@ class FinishedPage extends Component {
               <Button onClick={ this.handleShare } buttonText="Share Your Pizza" colourTheme="success" isBlock={true} />
           </div>
         </section>
-        <section style={inputStyling}>
+        {/* <section style={inputStyling}>
           <input name="email" type="email" />
           <input name="submit" type="submit" />
-        </section>
+        </section> */}
       </main>
     );
   }
